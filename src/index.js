@@ -6,13 +6,14 @@ import registerServiceWorker from './registerServiceWorker';
 import * as firebase from 'firebase';
 
 var config = {
-    apiKey: "AIzaSyAVDZYcwzezPsW5Dfl68WIfw24dClZWi8o",
-    authDomain: "spacetime-education.firebaseapp.com",
-    databaseURL: "https://spacetime-education.firebaseio.com",
-    projectId: "spacetime-education",
-    storageBucket: "spacetime-education.appspot.com",
-    messagingSenderId: "1076269969010"
-  };
+   apiKey: "AIzaSyCHlEfwJT0P7tZuxRrwr3Tat13aSRuhRuo",
+   authDomain: "spacetime-education-dev.firebaseapp.com",
+   databaseURL: "https://spacetime-education-dev.firebaseio.com",
+   projectId: "spacetime-education-dev",
+   storageBucket: "",
+   messagingSenderId: "103630627996"
+ };
+
 firebase.initializeApp(config);
 
 ReactDOM.render(<App />, document.getElementById('root'));
