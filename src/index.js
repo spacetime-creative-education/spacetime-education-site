@@ -5,14 +5,7 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import * as firebase from 'firebase';
 
-var config = {
-   apiKey: "AIzaSyCHlEfwJT0P7tZuxRrwr3Tat13aSRuhRuo",
-   authDomain: "spacetime-education-dev.firebaseapp.com",
-   databaseURL: "https://spacetime-education-dev.firebaseio.com",
-   projectId: "spacetime-education-dev",
-   storageBucket: "",
-   messagingSenderId: "103630627996"
- };
+var config = require('./firebase_config.json');
 
 firebase.initializeApp(config);
 
