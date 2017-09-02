@@ -57,6 +57,24 @@ body {
   height: 4000px;
 }
 */
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+}
+
+header > div > div.header-item > div.column > h1.header-title {  /*child of child of child of ...*/
+  transition-delay: 0.20s;
+  transition-duration: 0.30s;
+  transition-timing-function: ease-in-out;
+}
+
 
 .header-bar {
   background: white;
@@ -83,11 +101,21 @@ h1.header-title {
 .logo {
   width: 5rem;
   height: 5rem;
+  transition-delay: 0.20s;
+  transition-duration: 0.30s;
+  transition-timing-function: ease-in-out;
 }
 
 /* on shortening header */
+header.shorten-header {
+  flex: 0 0 auto;
+  z-index: 1000;
+}
+
 header.shorten-header > div > div.header-item > div.column > h1.header-title {  /*child of child of child of ...*/
-  display: none;
+  /*display: none;*/
+  font-size: 0rem;
+  opacity: 0;
 }
 
 header.shorten-header > div > div.header-item > div.column > .logo {  /*child of child of child of ...*/
@@ -123,19 +151,23 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  z-index: 0;
 }
 
 .row-1 {
   justify-content: space-between;
   align-items: center;
-  background-image: linear-gradient(#ff9d2f, #ff6126);
-  /*transform: skewY(-6deg);
+  /*background-image: linear-gradient(#ff9d2f, #ff6126);
+  transform: skewY(-6deg);
   transform-origin: top left;*/
 }
 
 .row-2 {
   justify-content: space-between;
   align-items: baseline;
+  background-image: linear-gradient(45deg, #f88485, #fcedb7);
+  transform: skewY(-6deg);
+  transform-origin: top left;
   /*background: yellow;*/
 }
 
@@ -145,12 +177,22 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   /*background: gray;*/
 }
 
+.row-4 {
+  justify-content: space-between;
+  align-items: baseline;
+  background-image: linear-gradient(45deg, #f88485, #fcedb7);
+  transform: skewY(6deg);
+  transform-origin: top left;
+  /*background: yellow;*/
+}
+
 .hidden {
   visibility: hidden;
 }
 
 .box {
   margin: 1rem;
+  z-index: 1;
   /*box-shadow: 0.25rem 0.25rem 0.5rem var(--shadow);*/
 }
 
@@ -168,6 +210,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   width: 20rem;
   background-color: var(--primary-color-2);
   align-self: flex-end;
+  transform: skewY(6deg);
+  transform-origin: top left;
 }
 
 .box-3 {
@@ -180,6 +224,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   height: 25rem;
   width: 75rem;
   background-color: var(--primary-color-4);
+  transform: skewY(-6deg);
+  transform-origin: top left;
 }
 
 .box-5 {

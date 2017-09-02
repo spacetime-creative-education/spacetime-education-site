@@ -28,5 +28,4 @@ Menubar.defaultProps = {
   width: "75%"
 }
 
-
 export default Menubar;

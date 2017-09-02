@@ -24,7 +24,13 @@ class StickyHeader extends Component {
 
   handleScroll(event){
       console.log('Scroll detected');
-      this.setState({shorten: true});
+      console.log(document.documentElement.scrollTop);
+      if (document.documentElement.scrollTop !== 0){
+        this.setState({shorten: true});
+      } else {
+        this.setState({shorten: false});
+      }
+
       console.log(this.state.shorten);
       console.log((this.state.shorten ? 'shorten-header' : ''))
       //event.preventDefault();

@@ -43,7 +43,7 @@ class App extends Component {
 
     return (
 
-      <div id="outer-container">
+      <div id="outer-container" class="outer-container">
         <StMetaTags></StMetaTags>
       {/*}<header>
           <div className="header-bar header-row">
@@ -64,31 +64,33 @@ class App extends Component {
         <div className="container" id="page-wrap">
             {/*<Menubar>Menu</Menubar>*/}
             <div className="row row-1">
-              <div className="box box-1 "></div>
+              <div className="box box-1 hidden"></div>
               <div className="box box-1 hidden"></div>
               <div className="box box-1 hidden"></div>
             </div>
             <div className="row row-2">
-              <div className="box box-2"></div>
-            <div className="box box-2 hidden"></div>
-              <div className="box box-2"></div>
+              <div className="box box-2 hidden"></div>
+              <div className="box box-1 hidden"></div>
+              <div className="box box-2 hidden"></div>
             </div>
             <div className="row row-3">
               <div className="box box-3 hidden"></div>
               <div className="box box-3 hidden"></div>
-              <div className="box box-3"></div>
+              <div className="box box-3 hidden"></div>
             </div>
             {/*<div className="row bus"><h1 data-shadow="Happy Coding!">Happy Coding!</h1></div>*/}
             <div className="row row-4">
               <div className="box box-4 hidden"></div>
               <div className="box box-4 hidden"></div>
-              <div className="box box-4"><YouTube
+            <div className="box box-4 hidden"><YouTube
                   videoId={"IVy9XZXpcfw"}                  // defaults -> null
                   opts={opts}                              // defaults -> {}
                 />
               </div>
             </div>
+            {/*<div className="row"><P5Wrapper sketch={footer_starfield}></P5Wrapper></div>*/}
           </div>
+
         </div>
     );
   }
