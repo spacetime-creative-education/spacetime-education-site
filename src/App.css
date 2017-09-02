@@ -43,38 +43,25 @@ html {
     box-sizing: content-box;
     font-size: medium;
   }
-
-  Menubar {
-    width: 40%;
-  }
-}
-
-Menubar {
-  width: 75%;
-}
-/*
-body {
-  height: 4000px;
-}
-*/
-.outer-container {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0px;
+
 }
 
+/* Animating the logo text */
 header > div > div.header-item > div.column > h1.header-title {  /*child of child of child of ...*/
   transition-delay: 0.20s;
   transition-duration: 0.30s;
   transition-timing-function: ease-in-out;
 }
 
+header > div.header-bar {  /*child of child of child of ...*/
+  border-bottom: solid 0.125rem white;
+  transition-delay: 0.20s;
+  transition-duration: 0.30s;
+  transition-timing-function: ease-in-out;
+}
 
 .header-bar {
   background: white;
@@ -108,7 +95,9 @@ h1.header-title {
 
 /* on shortening header */
 header.shorten-header {
-  flex: 0 0 auto;
+  position: fixed;
+  top: 0px; left: 0px;
+  width: 100%;
   z-index: 1000;
 }
 
@@ -119,8 +108,8 @@ header.shorten-header > div > div.header-item > div.column > h1.header-title {  
 }
 
 header.shorten-header > div > div.header-item > div.column > .logo {  /*child of child of child of ...*/
-  width: 4rem;
-  height: 4rem;
+  width: 3.25rem;
+  height: 3.25rem;
   padding: 0.5rem;
 }
 
@@ -136,6 +125,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 }
 
 .container {
+  background: red;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -165,10 +155,14 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .row-2 {
   justify-content: space-between;
   align-items: baseline;
-  background-image: linear-gradient(45deg, #f88485, #fcedb7);
+  /*background-image: linear-gradient(45deg, #f88485, #fcedb7);*/
+  background-image: linear-gradient(45deg, #4e8f99, #4e6985);
+  background-color: #4e8f99;
   transform: skewY(-6deg);
   transform-origin: top left;
-  /*background: yellow;*/
+  /*background: yellow;
+  shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
+  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);*/
 }
 
 .row-3 {
@@ -181,7 +175,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   justify-content: space-between;
   align-items: baseline;
   background-image: linear-gradient(45deg, #f88485, #fcedb7);
-  transform: skewY(6deg);
+  transform: skewY(-6deg);
   transform-origin: top left;
   /*background: yellow;*/
 }
@@ -247,8 +241,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: relative;
-  width: 2rem;
-  height: 2em;
+  width: 1.25rem;
+  height: 1.25em;
   left: 1.5rem;
   top: 1.5rem;
 }
@@ -276,10 +270,54 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   padding-left: 2rem;
   padding-top: 8rem;
   padding-right: 2rem;
-  padding-bottom: 0rem;
+  padding-bottom: 1rem;
   /*padding: 2.5em 1.5em 0;*/
-  font-size: 1.15em;
+  font-size: 1.15rem;
   overflow-y: hidden !important;
+}
+
+.table-content {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.125rem;
+}
+
+.content-row {
+  display: flex !important;
+  flex-flow: row nowrap;
+  align-items: center;
+  width: 100%;
+  height: 3rem;
+  margin: 0.5rem;
+}
+
+.content-item {
+  height: 100%;
+  margin: 0.25rem;
+  width: 100%;
+}
+
+h2 > a.content-link {
+  text-decoration: none;
+  color: black;
+  font-family: 'League Spartan', serif;
+  background: linear-gradient(currentColor, currentColor) bottom / 0 .001em no-repeat;
+	transition: 0.30s background-size;
+}
+
+h2 > a.content-link:hover {
+  background-size: 100% .2em;
+}
+
+.triangle {
+
+  margin: 0.125rem;
+  width: 100%;
+  height: 100%;
+  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
+  clip-path: polygon(0 10%, 100% 0, 100% 60%, 30% 100%);
+  background: red;
 }
 
 /* Morph shape necessary with bubble or elastic */
@@ -304,12 +342,18 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   background: yellow;
 }
 
-.my-bm-menu-item{
+.my-bm-menu-container {
+  background: green;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.my-bm-menu-item {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-between;
-}
+}/**/
+
 /* School bus animation text effect */
 .bus {
 

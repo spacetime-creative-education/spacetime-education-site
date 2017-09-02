@@ -45,22 +45,7 @@ class App extends Component {
 
       <div id="outer-container" class="outer-container">
         <StMetaTags></StMetaTags>
-      {/*}<header>
-          <div className="header-bar header-row">
-            <div className="header-item"><Menubar></Menubar></div>
-            <div className="header-item">
-              <div className="column">
-                <img className="logo" src={ logo } />
-                <h1 className="header-title">Spacetime Education</h1>
-              </div>
-            </div>
-            <div className="header-item hidden"></div>
-          </div>
-        </header>
-        */}
         <StickyHeader onScroll={this.handleScroll}></StickyHeader>
-      {/*<BurgerMenu id="slide" pageWrapId="page-wrap" outerContainerId="outer-container">{items}</BurgerMenu>*/}
-
         <div className="container" id="page-wrap">
             {/*<Menubar>Menu</Menubar>*/}
             <div className="row row-1">

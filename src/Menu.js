@@ -10,15 +10,17 @@ class Menubar extends Component {
   render () {
     return (
       <Menu width={this.props.width} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
-        <div class="my-bm-menu-item">
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
-
-          <a id="home" className="menu-item" href="/">Home</a>
-          <a id="about" className="menu-item" href="/about">About</a>
+        <div className="table-content">
+          <div className="content-row">
+            <div className="content-item"><h2><a className="content-link" href="/">Home</a></h2></div>
+            <div className="content-item"><h2><a className="content-link" href="/">Learn</a></h2></div>
+          </div>
+          <div className="content-row">
+            <div className="content-item"><h2><a className="content-link" href="/">Courses</a></h2></div>
+            <div className="content-item"><h2><a className="content-link" href="/">Contact</a></h2></div>
+          </div>
         </div>
-        <a id="contact" className="menu-item" href="/contact">Contact</a>
-        <a id="contact" className="menu-item" href="/contact">Contact</a>
+        <div className="triangle"></div>
       </Menu>
     );
   }
