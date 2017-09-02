@@ -1,32 +1,299 @@
-.App {
+:root {
+  --color-1: rgba(242, 198, 163, 1);
+  --color-2: rgba(206, 226, 216, 1);
+  --color-3: rgba(78, 94, 120, 1);
+  --color-4: rgba(191, 112, 105, 1);
+  --color-5: rgba(254, 222, 146, 1);
+  --shadow: #d3d3d3;
+  --primary-color-1: rgba(0, 233, 101, 1); /*Taken from https://angusburgers.deviantart.com/art/Big-Chungy-682241976*/
+  --primary-color-2: rgba(0, 101, 233, 1);
+  --primary-color-3: rgba(63, 72, 136, 1);
+  --primary-color-4: rgba(233, 0, 101, 1);
+  --primary-color-5: rgba(233, 101, 0, 1);
+  --secondary-color-1: #424b60;
+  --secondary-color-2: #1c1f28;
+
+  /* Gray scale https://orig07.deviantart.net/cc18/f/2017/243/d/c/warm_ups_10___journey_by_coupleofkooks-dblxzn9.png */
+  --platinum: #e3e1e7;
+  --manatee: #9a9bb0;
+  --outer-space-gray: #444b59;
+  --eerie-black: #161822;
+
+}
+
+@font-face {
+      font-family: 'League Spartan';
+      src: url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.eot');
+      src: url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.eot?#iefix') format('embedded-opentype'),
+           url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.woff2') format('woff2'),
+           url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.woff') format('woff'),
+           url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.ttf') format('truetype'),
+           url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.svg#league_spartanbold') format('svg');
+      font-weight: bold;
+      font-style: normal;
+}
+
+html {
+  box-sizing: content-box;
+  font-size: small;
+}
+
+@media only screen and (min-width: 768px) {    /* Mobile first */
+  html {
+    box-sizing: content-box;
+    font-size: medium;
+  }
+
+  Menubar {
+    width: 40%;
+  }
+}
+
+Menubar {
+  width: 75%;
+}
+/*
+body {
+  height: 4000px;
+}
+*/
+
+.header-bar {
+  background: white;
+}
+
+h1.header-title {
+  font-family: 'League Spartan', serif;
+  font-size: 2rem;
+  color: var(--eerie-black);
+}
+
+.header-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.header-item {
+
+}
+
+.logo {
+  width: 5rem;
+  height: 5rem;
+}
+
+/* on shortening header */
+header.shorten-header > div > div.header-item > div.column > h1.header-title {  /*child of child of child of ...*/
+  display: none;
+}
+
+header.shorten-header > div > div.header-item > div.column > .logo {  /*child of child of child of ...*/
+  width: 4rem;
+  height: 4rem;
+  padding: 0.5rem;
+}
+
+header.shorten-header > div.header-bar {  /*child of child of child of ...*/
+  border-bottom: solid 0.125rem var(--platinum);
+}
+
+
+.column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  /*padding-left: 2rem;
+  padding-right: 2rem;*/
+  background: white;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.row-1 {
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(#ff9d2f, #ff6126);
+  /*transform: skewY(-6deg);
+  transform-origin: top left;*/
+}
+
+.row-2 {
+  justify-content: space-between;
+  align-items: baseline;
+  /*background: yellow;*/
+}
+
+.row-3 {
+  justify-content: space-between;
+  align-items: baseline;
+  /*background: gray;*/
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.box {
+  margin: 1rem;
+  /*box-shadow: 0.25rem 0.25rem 0.5rem var(--shadow);*/
+}
+
+.box-1 {
+  height: 25rem;
+  width: 25rem;
+  background-color: var(--manatee);
+  align-self: center;
+  /*transform: skewY(6deg);
+  transform-origin: top left;*/
+}
+
+.box-2 {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--primary-color-2);
+  align-self: flex-end;
+}
+
+.box-3 {
+  height: 25rem;
+  width: 25rem;
+  background-color: var(--primary-color-3);
+}
+
+.box-4 {
+  height: 25rem;
+  width: 75rem;
+  background-color: var(--primary-color-4);
+}
+
+.box-5 {
+  height: 20rem;
+  width: 60rem;
+  background-color: var(--primary-color-5);
+}
+
+.custom-class1{
+  align-self: flex-end;
+}
+
+.card {
+  -webkit-box-shadow: 0px 0px 20px 0px rgba(110,110,110,0.75);
+  -moz-box-shadow: 0px 0px 20px 0px rgba(110,110,110,0.75);
+  box-shadow: 0px 0px 20px 0px rgba(110,110,110,0.75);
+}
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: relative;
+  width: 2rem;
+  height: 2em;
+  left: 1.5rem;
+  top: 1.5rem;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--eerie-black);
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 24px;
+  width: 24px;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: #bdc3c7;
+}
+
+/* General sidebar styles */
+.bm-menu {
+  background: white;
+  width: 100%;
+  padding-left: 2rem;
+  padding-top: 8rem;
+  padding-right: 2rem;
+  padding-bottom: 0rem;
+  /*padding: 2.5em 1.5em 0;*/
+  font-size: 1.15em;
+  overflow-y: hidden !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: white;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  width: 100%;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.menu-item {
+  font-family: serif;
+  padding: 1rem;
+  background: yellow;
+}
+
+.my-bm-menu-item{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+/* School bus animation text effect */
+.bus {
+
+}
+
+.bus h1 {
+  color: var(--eerie-black);
+  font-family: serif;
+  font-size: 10em;
+  text-shadow: .03em .03em 0 var(--platinum);
   text-align: center;
-}
+  /*white-space: nowrap;  Forces the sentence into single line */
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
+  animation-name: banner;
+  animation-duration: 20s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  }
+/*
+.bus h1::before {
+  content: attr(data-shadow);
+  color: rgba(30, 30, 30, 0.5);
+  text-shadow: none;
+  transform: skewY(60deg);
+}*/
 
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-.marker {
-  background-size: cover;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
+@keyframes banner {
+  from { transform: translateX(100%);}
+    to { transform: translateX(-100%);}
 }
