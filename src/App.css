@@ -19,8 +19,20 @@
   --outer-space-gray: #444b59;
   --eerie-black: #161822;
 
+  /* Palettes inspired by https://rdauterman.deviantart.com/ */
+  --xmen-light-green: #f3f8d0;
+  --xmen-dark-green: #36bc9b;
+  --xmen-pink: #ec5e87;
+
+  --xmen-light-blue: #28808e;
+  --xmen-dark-blue: #264a78;
+  --xmen-black: #000000;
+  --xmen-yellow: #e5ef8c;
+
+
 }
 
+/* https://blog.snappa.com/font-combinations/ */
 @font-face {
       font-family: 'League Spartan';
       src: url('./assets/fonts/league-spartan/webfonts/leaguespartan-bold.eot');
@@ -156,13 +168,13 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   justify-content: space-between;
   align-items: baseline;
   /*background-image: linear-gradient(45deg, #f88485, #fcedb7);*/
-  background-image: linear-gradient(45deg, #4e8f99, #4e6985);
+  background-image: linear-gradient(30deg, var(--xmen-light-green), var(--xmen-dark-green));
   background-color: #4e8f99;
-  transform: skewY(-6deg);
+  /*transform: skewY(-6deg);
   transform-origin: top left;
-  /*background: yellow;
+  background: yellow;*/
   shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
-  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);*/
+  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
 }
 
 .row-3 {
@@ -174,10 +186,11 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .row-4 {
   justify-content: space-between;
   align-items: baseline;
+  background: red;
   background-image: linear-gradient(45deg, #f88485, #fcedb7);
-  transform: skewY(-6deg);
+  /*transform: skewY(-6deg);
   transform-origin: top left;
-  /*background: yellow;*/
+  background: yellow;*/
 }
 
 .hidden {
@@ -191,7 +204,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 }
 
 .box-1 {
-  height: 25rem;
+  height: 85rem;
   width: 25rem;
   background-color: var(--manatee);
   align-self: center;
@@ -200,12 +213,15 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 }
 
 .box-2 {
-  height: 20rem;
+  height: 40rem;
   width: 20rem;
-  background-color: var(--primary-color-2);
-  align-self: flex-end;
-  transform: skewY(6deg);
+  background-color: var(--xmen-pink);
+  align-self: center;
+
+  /*transform: skewY(6deg);
   transform-origin: top left;
+  shape-outside: polygon(0 -10.5%, 100% 0, 100% 100%, 0 -78.75%);
+  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);*/
 }
 
 .box-3 {
@@ -279,8 +295,26 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .table-content {
   display: flex !important;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+  height: 100%;
+  background: yellow;
+}
+
+.navigate {
+  display: flex !important;
+  flex-direction: column;
   justify-content: center;
   padding: 0.125rem;
+  background: blue;
+}
+
+.socialize {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.125rem;
+  background: blue;
 }
 
 .content-row {
@@ -310,16 +344,21 @@ h2 > a.content-link:hover {
   background-size: 100% .2em;
 }
 
-.triangle {
-
-  margin: 0.125rem;
+.social-icons {
+  display: flex !important;
+  flex-flow: row nowrap;
   width: 100%;
-  height: 100%;
-  shape-outside: polygon(0 0, 100% 0, 100% 100%, 30% 100%);
-  clip-path: polygon(0 10%, 100% 0, 100% 60%, 30% 100%);
-  background: red;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  align-items: center;
+  justify-content: space-around;
 }
 
+.filtered {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: white;

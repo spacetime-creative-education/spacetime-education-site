@@ -11,10 +11,7 @@ import footer_starfield from './footer_starfield.js';
 import Card from './Card.js';
 import { ParallaxController } from 'react-scroll-parallax';
 import Menubar from './Menu.js';
-import StickyHeader from './StickyHeader.js'
-{/*import StickyHeader from 'react-sticky-header';
-import { bubble as BurgerMenu } from 'react-burger-menu';
-import BurgerMenu from 'react-burger-menu';*/}
+import StickyHeader from './StickyHeader.js';
 
 
 ParallaxController.init();
@@ -54,9 +51,9 @@ class App extends Component {
               <div className="box box-1 hidden"></div>
             </div>
             <div className="row row-2">
-              <div className="box box-2 hidden"></div>
-              <div className="box box-1 hidden"></div>
-              <div className="box box-2 hidden"></div>
+              <div className="box box-2 "></div>
+            <div className="box box-1 hidden"></div>
+          <div className="box box-2 hidden"></div>
             </div>
             <div className="row row-3">
               <div className="box box-3 hidden"></div>
