@@ -1,4 +1,6 @@
 :root {
+  --primary-font: 'League Spartan', Helvetica;
+  --secondary-font: 'Montserrat', sans-serif;
   --color-1: rgba(242, 198, 163, 1);
   --color-2: rgba(206, 226, 216, 1);
   --color-3: rgba(78, 94, 120, 1);
@@ -29,8 +31,10 @@
   --xmen-black: #000000;
   --xmen-yellow: #e5ef8c;
 
-
 }
+
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 /* https://blog.snappa.com/font-combinations/ */
 @font-face {
@@ -80,7 +84,7 @@ header > div.header-bar {  /*child of child of child of ...*/
 }
 
 h1.header-title {
-  font-family: 'League Spartan', serif;
+  font-family: var(--primary-font);
   font-size: 2rem;
   color: var(--eerie-black);
 }
@@ -186,11 +190,13 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .row-4 {
   justify-content: space-between;
   align-items: baseline;
-  background: red;
-  background-image: linear-gradient(45deg, #f88485, #fcedb7);
+  background: var(--xmen-dark-blue);
+  background-image: linear-gradient(45deg, var(--xmen-light-blue), var(--xmen-dark-blue));
   /*transform: skewY(-6deg);
   transform-origin: top left;
   background: yellow;*/
+  shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
+  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
 }
 
 .hidden {
@@ -298,7 +304,6 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   justify-content: space-between;
   padding: 0;
   height: 100%;
-  background: yellow;
 }
 
 .navigate {
@@ -306,7 +311,6 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   flex-direction: column;
   justify-content: center;
   padding: 0.125rem;
-  background: blue;
 }
 
 .socialize {
@@ -314,7 +318,6 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   flex-direction: column;
   justify-content: center;
   padding: 0.125rem;
-  background: blue;
 }
 
 .content-row {
@@ -335,13 +338,29 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 h2 > a.content-link {
   text-decoration: none;
   color: black;
-  font-family: 'League Spartan', serif;
-  background: linear-gradient(currentColor, currentColor) bottom / 0 .001em no-repeat;
+  font-family: var(--primary-font);
+  background: linear-gradient(var(--xmen-yellow), var(--xmen-yellow)) bottom / 0 .001em no-repeat;
 	transition: 0.30s background-size;
 }
 
 h2 > a.content-link:hover {
   background-size: 100% .2em;
+}
+
+.slab {
+  background: var(--xmen-yellow);
+  height: 0.75rem;
+  width: 80%;
+  align-self: center;
+}
+
+.animate-slab {
+  animation-name: grow;
+  animation-duration: 0.30s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
 }
 
 .social-icons {
@@ -359,6 +378,27 @@ h2 > a.content-link:hover {
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
+
+.visiting-card {
+  display: flex !important;
+  flex-direction: row;
+  height: 6rem;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.visiting-card-items {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.visiting-card-right-item {
+  text-align: right;
+  align-self: flex-end;
+  font-family: var(--secondary-font);
+  color: var(--xmen-black);
+}
+
 /* Morph shape necessary with bubble or elastic */
 .bm-morph-shape {
   fill: white;
@@ -378,7 +418,6 @@ h2 > a.content-link:hover {
 .menu-item {
   font-family: serif;
   padding: 1rem;
-  background: yellow;
 }
 
 .my-bm-menu-container {
@@ -425,4 +464,9 @@ h2 > a.content-link:hover {
 @keyframes banner {
   from { transform: translateX(100%);}
     to { transform: translateX(-100%);}
+}
+
+@keyframes grow {
+  from { height: 0.001rem; width: 1%;}
+    to { height: 0.75rem; width: 80%;}
 }
