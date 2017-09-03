@@ -35,7 +35,7 @@ class Menubar extends Component {
             </div>
             <div className="content-row">
               <div className="content-item"><h2><a className="content-link" href="/">Subscribe</a></h2></div>
-              <div className="content-item"><h2><a className="content-link hidden" href="/">Contact</a></h2></div>
+              <div className="content-item"><h2><a className="content-link" href="/">Contact</a></h2></div>
             </div>
           </div>
           <div className="socialize">
