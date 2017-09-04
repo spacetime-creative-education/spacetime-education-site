@@ -6,36 +6,42 @@ class Menubar extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      is_open: false,
       slab_class: "",
     };
     this.isMenuOpen = this.isMenuOpen.bind(this);
+    this.closeMenu = this.closeMenu.bind(this);
   }
 
   isMenuOpen(state){
     if (state.isOpen){
-      this.setState({slab_class: "slab animate-slab"});
+      this.setState({is_open: true, slab_class: "slab animate-slab"});
     } else {
-      this.setState({slab_class: "slab"});
+      this.setState({is_open: false, slab_class: "slab"});
     }
     return state.isOpen;
   }
 
+  closeMenu(){
+    this.setState({is_open: false});
+  }
+
   render () {
     return (
-      <Menu onStateChange={this.isMenuOpen} width={this.props.width} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
+      <Menu isOpen={this.state.is_open} onStateChange={this.isMenuOpen} width={this.props.width} pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }>
         <div className="table-content">
           <div className="navigate">
             <div className="content-row">
-              <div className="content-item"><h2><a className="content-link" href="/">Home</a></h2></div>
-              <div className="content-item"><h2><a className="content-link" href="/">Learn</a></h2></div>
+              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#home">Home</a></h2></div>
+            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#how">Learn</a></h2></div>
             </div>
             <div className="content-row">
-              <div className="content-item"><h2><a className="content-link" href="/">Courses</a></h2></div>
-              <div className="content-item"><h2><a className="content-link" href="/">Contact</a></h2></div>
+              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#where">Where</a></h2></div>
+            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#when">When</a></h2></div>
             </div>
             <div className="content-row">
-              <div className="content-item"><h2><a className="content-link" href="/">Subscribe</a></h2></div>
-            <div className="content-item"><h2><a className="content-link" href="/">Pricing</a></h2></div>
+              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#pricing">Pricing</a></h2></div>
+            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#contact">Contact</a></h2></div>
             </div>
           </div>
           <div className="socialize">

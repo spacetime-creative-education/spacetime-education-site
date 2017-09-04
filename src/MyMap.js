@@ -65,13 +65,13 @@ class MyMap extends Component {
         onViewportChange={v => this.setState({viewport: v})}
         preventStyleDiffing={false}
         >
-        <div style={{position: 'absolute', right: 0, padding: '0.5rem'}}>
+        <div style={{position: 'absolute', right: 0, bottom: '32px', padding: '0.5rem'}}>
           <NavigationControl onViewportChange={v => this.setState({viewport: v})} />
         </div>
         <Marker latitude={13.031102} longitude={80.183646} offsetLeft={-20} offsetTop={-10}>
            <div className="pin"></div>
         </Marker>
-        <button onClick={this.props.toggleFullscreen}>Fullscreen</button>
+        <button style={{position: 'absolute', right: 0, background: "transparent", padding: 0, border: 0}} onClick={this.props.toggleFullscreen}><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"><path d="M14 28h-4v10h10v-4h-6v-6zm-4-8h4v-6h6v-4H10v10zm24 14h-6v4h10V28h-4v6zm-6-24v4h6v6h4V10H28z" fill="white"/></svg></button>
       </MapGL>
     )
   }

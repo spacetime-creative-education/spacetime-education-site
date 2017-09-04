@@ -114,7 +114,7 @@ header.shorten-header {
   position: fixed;
   top: 0px; left: 0px;
   width: 100%;
-  z-index: 1000;
+  z-index: 2;
 }
 
 header.shorten-header > div > div.header-item > div.column > h1.header-title {  /*child of child of child of ...*/
@@ -170,7 +170,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 
 .row-2 {
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   /*background-image: linear-gradient(45deg, #f88485, #fcedb7);*/
   background-image: linear-gradient(30deg, var(--xmen-light-green), var(--xmen-dark-green));
   background-color: #4e8f99;
@@ -233,7 +233,7 @@ hand is used to fill content */
 .box-2 {
   height: 40rem;
   width: 20rem;
-  /*background-color: var(--xmen-pink);*/
+  background-color: var(--xmen-pink);
   align-self: center;
 
   /*transform: skewY(6deg);
@@ -278,7 +278,7 @@ hand is used to fill content */
   flex-direction: row;
   width: 30rem;
   height: 20rem;
-  background: pink;
+  /*background: pink;*/
 }
 
 .section-1-hello {
@@ -299,8 +299,57 @@ hand is used to fill content */
 .welcome-text {
   font-family: var(--secondary-font);
   font-size: 1.5rem;
-
 }
+
+.section-youtube {
+  width: 32rem;
+  height: 18rem;
+}
+
+.section-how {
+  display: flex;
+  flex-direction: row;
+  height: 40rem;
+  width: 20rem;
+  order: 0;
+}
+
+.section-how-title {
+  align-self: flex-start;
+  border: 0.5rem solid var(--xmen-pink);
+}
+
+.section-how-title > h1.hello-text {
+  background: var(--xmen-pink);
+}
+
+.section-how-desc {
+  align-self: flex-end;
+}
+
+.section-how-desc > h3 {
+  color: white;
+}
+
+.section-3 {
+  display: flex;
+  flex-direction: row;
+  width: 30rem;
+  height: 25rem;
+  /*backgroundpink;*/
+}
+
+.section-3-where {
+  align-self: flex-start;
+  /*background: green;*/
+}
+
+.section-3-address {
+  align-self: flex-end;
+  font-family: var(--secondary-font);
+  /*background: green;*/
+}
+
 .custom-class1{
   align-self: flex-end;
 }
@@ -321,6 +370,7 @@ hand is used to fill content */
   height: 1.25em;
   left: 1.5rem;
   top: 1.5rem;
+  z-index: 2;
 }
 
 /* Color/shape of burger icon bars */
@@ -398,6 +448,17 @@ h2 > a.content-link {
 }
 
 h2 > a.content-link:hover {
+  background-size: 100% .2em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  background: linear-gradient(var(--xmen-yellow), var(--xmen-yellow)) bottom / 0 .001em no-repeat;
+	transition: 0.30s background-size;
+}
+
+a:hover {
   background-size: 100% .2em;
 }
 
