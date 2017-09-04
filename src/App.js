@@ -14,6 +14,7 @@ import Menubar from './Menu.js';
 import StickyHeader from './StickyHeader.js';
 import MyMap from './MyMap.js';
 import Hello from './Hello.js';
+import MediaQuery from 'react-responsive';
 
 ParallaxController.init();
 
@@ -30,17 +31,7 @@ class App extends Component {
       }
     };
 
-    const items = [
-          <a key="0" href=""><i className="fa fa-fw fa-star-o" /><span>Favorites</span></a>,
-          <a key="1" href=""><i className="fa fa-fw fa-bell-o" /><span>Alerts</span></a>,
-          <a key="2" href=""><i className="fa fa-fw fa-envelope-o" /><span>Messages</span></a>,
-          <a key="3" href=""><i className="fa fa-fw fa-comment-o" /><span>Comments</span></a>,
-          <a key="4" href=""><i className="fa fa-fw fa-bar-chart-o" /><span>Analytics</span></a>,
-          <a key="5" href=""><i className="fa fa-fw fa-newspaper-o" /><span>Reading List</span></a>
-        ];
-
     return (
-
       <div id="outer-container" class="outer-container">
         <StMetaTags></StMetaTags>
         <StickyHeader onScroll={this.handleScroll}></StickyHeader>
@@ -65,7 +56,16 @@ class App extends Component {
             </div>
             <div className="row row-3">
               <div className="box box-3 hidden"></div>
-              <div className="box box-3 "><MyMap></MyMap></div>
+              <div className="box yellow">
+                <MediaQuery minWidth={768}>
+                  <MyMap width={500} height={500} forcePseudoFullscreen={true}
+isPseudoFullscreen={false}></MyMap>
+                </MediaQuery>
+                <MediaQuery maxWidth={767}>
+                  <MyMap width={300} height={400} forcePseudoFullscreen={true}
+isPseudoFullscreen={false}></MyMap>
+                </MediaQuery>
+                </div>
               <div className="box box-3 hidden"></div>
             </div>
             {/*<div className="row bus"><h1 data-shadow="Happy Coding!">Happy Coding!</h1></div>*/}
@@ -90,7 +90,7 @@ class App extends Component {
             <div className="box box-6 "><Hello></Hello></div>
               <div className="box box-6 hidden"></div>
             </div>
-            
+
             {/*<div className="row"><P5Wrapper sketch={footer_starfield}></P5Wrapper></div>*/}
           </div>
 

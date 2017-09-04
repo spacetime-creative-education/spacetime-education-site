@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import config from './config.json';
 import MapGL, {NavigationControl, Marker} from 'react-map-gl';
+import Fullscreenable from 'react-fullscreenable';
+import PropTypes from 'prop-types';
 
 class MyMap extends Component {
   constructor(props) {
@@ -9,13 +11,47 @@ class MyMap extends Component {
       viewport: {
         latitude: 13.030970,
         longitude: 80.183993,
-        width: 400,
-        height: 400,
+        width: this.props.width,
+        height: this.props.height,
         zoom: 14,
         bearing: 0,
         pitch: 0
       }
     };
+  }
+
+  componentWillReceiveProps(nextProps) {
+        if (this.props.isFullscreen !== nextProps.isFullscreen) {
+            // Fullscreen status has changed.
+            console.log("Toggling Fullscreen");
+
+            if (nextProps.isFullscreen) {
+              console.log(nextProps.viewportDimensions);
+              this.setState({viewport: {
+                latitude: 13.030970,
+                longitude: 80.183993,
+                width: nextProps.viewportDimensions.width,
+                height: nextProps.viewportDimensions.height,
+                zoom: 14,
+                bearing: 0,
+                pitch: 0
+              }
+              });
+            } else {
+              console.log(this.props.width);
+              this.setState({viewport: {
+                latitude: 13.030970,
+                longitude: 80.183993,
+                width: this.props.width,
+                height: this.props.height,
+                zoom: 14,
+                bearing: 0,
+                pitch: 0
+                }
+              });
+            }
+
+        }
   }
 
   render(){
@@ -35,9 +71,23 @@ class MyMap extends Component {
         <Marker latitude={13.031102} longitude={80.183646} offsetLeft={-20} offsetTop={-10}>
            <div className="pin"></div>
         </Marker>
+        <button onClick={this.props.toggleFullscreen}>Fullscreen</button>
       </MapGL>
     )
   }
 }
 
-export default MyMap;
+MyMap.defaultProps = {
+  width: 400,
+  height: 400
+}
+
+MyMap.propTypes = {
+    isFullscreen: PropTypes.bool,
+    toggleFullscreen: PropTypes.func,
+    viewportDimensions: PropTypes.object
+};
+
+const FullscreenableMyMap = Fullscreenable()(MyMap);
+
+export default FullscreenableMyMap;

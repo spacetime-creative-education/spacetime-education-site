@@ -183,8 +183,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 
 .row-3 {
   justify-content: space-between;
-  align-items: baseline;
-  /*background: gray;*/
+  align-items: center;
+  /*background: green;*/
 }
 
 .row-4 {
@@ -263,7 +263,8 @@ hand is used to fill content */
 }
 
 .conversational-form {
-  height: 25rem;
+  height: 30rem;
+  border: 2px solid var(--platinum);
 }
 
 .box-6 {
@@ -304,6 +305,9 @@ hand is used to fill content */
   align-self: flex-end;
 }
 
+.yellow {
+  background: yellow;
+}
 .card {
   -webkit-box-shadow: 0px 0px 20px 0px rgba(110,110,110,0.75);
   -moz-box-shadow: 0px 0px 20px 0px rgba(110,110,110,0.75);
