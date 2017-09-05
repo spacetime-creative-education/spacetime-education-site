@@ -27,6 +27,7 @@ class StMetaTags extends React.Component {
             <meta name="msapplication-TileImage" content="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/ms-icon-144x144.png" />
             <meta name="theme-color" content="#00e965" />
             <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" />
         </Helmet>
       )
   }

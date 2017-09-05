@@ -46,7 +46,7 @@ class App extends Component {
                   <h1 className="hello-text">Hello,</h1>
                 </Parallax>
                 <Parallax className="box section-1-welcome" offsetXMax="0px" offsetXMin="50px">
-                  <h3 className="welcome-text"><i>Welcome to Spacetime Education. A fun place to learn<br/><a href="https://www.python.org/">Python Programming</a><br/>in Chennai.</i></h3>
+                  <h3 className="welcome-text"><i>Welcome to Spacetime Education. A fun place to learn<br/><a id="pythonorg" href="https://www.python.org/">Python Programming</a><br/>in Chennai.</i></h3>
                 </Parallax>
               </div>
               <div className="box box-1 hidden"></div>
@@ -64,7 +64,7 @@ class App extends Component {
                   <h1 className="hello-text">Fun with Python Programming for beginners</h1>
                 </Parallax>
                 <Parallax className="box section-how-desc" offsetXMax="0px" offsetXMin="50px">
-                  <h3 className="welcome-text"><i>Introducing a <span style={{'text-decoration':'line-through'}}>Revolutionary</span>Ummm... Let's try this again. Introducing a fun take on learning to code! Enjoy the process, explore your creative potential</i></h3>
+                  <h3 className="welcome-text"><i>Introducing a <span style={{'text-decoration':'line-through'}}>Revolutionary</span>Ummm... Let's try this again. Introducing a fun take on learning to code in python! Enjoy the process, explore your creative potential</i></h3>
                 </Parallax>
               </div>
               <div className="box box-2 hidden"></div>
@@ -87,7 +87,7 @@ class App extends Component {
 isPseudoFullscreen={false}></MyMap>
                 </MediaQuery>
                 <MediaQuery maxWidth={767}>
-                  <MyMap width={0.85*window.innerWidth} height={400} forcePseudoFullscreen={true}
+                  <MyMap width={"400"} height={400} forcePseudoFullscreen={true}
 isPseudoFullscreen={false}></MyMap>
                 </MediaQuery>
                 </div>
@@ -118,7 +118,7 @@ isPseudoFullscreen={false}></MyMap>
             <ScrollableAnchor id={'contact'}>
             <div className="row row-6">
               <div className="box box-6 hidden"></div>
-            <div className="box box-6 "><Hello></Hello></div>
+              <div className="box box-6 "><Hello></Hello></div>
               <div className="box box-6 hidden"></div>
             </div>
             </ScrollableAnchor>

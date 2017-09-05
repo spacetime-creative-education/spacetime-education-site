@@ -264,12 +264,13 @@ hand is used to fill content */
 
 .conversational-form {
   height: 30rem;
+  width: 100%;
   border: 2px solid var(--platinum);
 }
 
 .box-6 {
   height: 25rem;
-  width: 20rem;
+  width: 30rem;
   /*background-color: var(--primary-color-5);*/
 }
 
@@ -394,7 +395,7 @@ hand is used to fill content */
   background: white;
   width: 100%;
   padding-left: 2rem;
-  padding-top: 8rem;
+  padding-top: 4rem;
   padding-right: 2rem;
   padding-bottom: 1rem;
   /*padding: 2.5em 1.5em 0;*/
@@ -405,9 +406,10 @@ hand is used to fill content */
 .table-content {
   display: flex !important;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 0;
   height: 100%;
+  /*background: green;*/
 }
 
 .navigate {
@@ -420,7 +422,7 @@ hand is used to fill content */
 .socialize {
   display: flex !important;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   padding: 0.125rem;
 }
 
@@ -451,14 +453,14 @@ h2 > a.content-link:hover {
   background-size: 100% .2em;
 }
 
-a {
+#pythonorg {
   text-decoration: none;
   color: black;
   background: linear-gradient(var(--xmen-yellow), var(--xmen-yellow)) bottom / 0 .001em no-repeat;
 	transition: 0.30s background-size;
 }
 
-a:hover {
+#pythonorg:hover {
   background-size: 100% .2em;
 }
 
@@ -477,13 +479,19 @@ a:hover {
   animation-iteration-count: 1;
   animation-timing-function: linear;
 }
+.subscribe {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: auto;
+}
 
 .social-icons {
   display: flex !important;
   flex-flow: row nowrap;
   width: 100%;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   margin-left: auto;
   align-items: center;
   justify-content: space-around;
@@ -497,9 +505,11 @@ a:hover {
 .visiting-card {
   display: flex !important;
   flex-direction: row;
-  height: 6rem;
+  height: 4rem;
+  bottom: 0;
   width: 100%;
   justify-content: space-between;
+  /*background: blue;*/
 }
 
 .visiting-card-items {
@@ -552,7 +562,7 @@ a:hover {
 }
 
 .my-bm-menu-container {
-  background: green;
+  /*background: green;*/
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -584,13 +594,33 @@ a:hover {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   }
-/*
-.bus h1::before {
-  content: attr(data-shadow);
-  color: rgba(30, 30, 30, 0.5);
-  text-shadow: none;
-  transform: skewY(60deg);
-}*/
+
+/*Mailchimp subscription form*/
+#mc_embed_signup{
+  background:#fff;
+  clear:left;
+  font:14px Helvetica,Arial,sans-serif;
+  width:100%;
+}
+
+#mce-EMAIL {
+  margin-right: 0.25rem !important;
+  border: 0 !important;
+  border-bottom: 0.125rem solid var(--platinum) !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  font-family: var(--primary-font) !important;
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+}
+
+#mce-EMAIL:required {
+  box-shadow: none !important;
+}
+#mce-EMAIL:required:focus {
+  box-shadow: none !important;
+  border-bottom: 0.125rem solid var(--manatee) !important;
+}
 
 @keyframes banner {
   from { transform: translateX(100%);}

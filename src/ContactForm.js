@@ -9,9 +9,11 @@ class ContactForm extends Component {
   render() {
     return (
       <form action="https://formspree.io/hello@spacetime.education"
-            method="POST">
-          <input type="text" name="name" />
-          <input type="email" name="_replyto" />
+            method="POST"
+            ref="form"
+            cf-prevent-autofocus>
+          <input type="text" ref="name" name="name" placeholder="Name"/>
+        {/* <input type="email" name="_replyto" /> */}
           <input type="submit" value="Send" />
       </form>
     )
