@@ -6,6 +6,7 @@
     "conversational-form": "^0.9.51",
     "firebase": "^4.2.0",
     "mapbox-gl": "^0.39.1",
+    "normalize.css": "^7.0.0",
     "react": "^15.6.1",
     "react-burger-menu": "^2.1.5",
     "react-dom": "^15.6.1",

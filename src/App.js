@@ -109,8 +109,8 @@ isPseudoFullscreen={false}></MyMap>
             <ScrollableAnchor id={'pricing'}>
             <div className="row row-5">
               <div className="box box-5 hidden"></div>
-              <div className="box box-5 ">
-
+            <div className="box section-apply ">
+                <Apply></Apply>
               </div>
               <div className="box box-5 hidden"></div>
             </div>
@@ -119,7 +119,7 @@ isPseudoFullscreen={false}></MyMap>
             <ScrollableAnchor id={'contact'}>
             <div className="row row-6">
               <div className="box box-6 hidden"></div>
-              <div className="box box-6 "><Apply></Apply></div>
+              <div className="box box-6 "></div>
               <div className="box box-6 hidden"></div>
             </div>
             </ScrollableAnchor>

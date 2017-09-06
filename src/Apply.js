@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import Hello from './Hello.js';
+import './bttn.min.css';
+import { Parallax } from 'react-scroll-parallax';
+
 
 class Apply extends Component {
   constructor(props){
@@ -19,25 +22,61 @@ class Apply extends Component {
     } else {
       content =
       <div>
-        <div className="deal"><h1>Here is the deal</h1></div>
-        <div className="steps-col">
-          <div className="steps-row">
-            <div className="steps-row"><h3>When you are ready, click on Apply</h3></div>
-          <div className="steps-row"><h3>Answer our pet bot Miphy the questionaire she has for you. We will use the answers you provide to evaluate your application and know more about you</h3></div>
-          </div>
-          <div className="steps-row">
-            <div className="steps-row"><h3>We will then say Hello to you through the email address you provide Miphy</h3></div>
-          <div className="steps-row"><h3>After which You can schedule a demo class with us</h3></div>
-          </div>
-          <div className="steps-row">
-            <div className="steps-row"><h3>If you like it, we will help you get on board</h3></div>
-            <div className="steps-row"><h3>If this isn't your cup of tea, no biggie. Give us a High5, we will share what other creators have in store. There is lot of Python on the web and its awesome!</h3></div>
-          </div>
-          <div className="steps-row">
-            <a className="apply-btn" onClick={this.onApplyClicked}><div className="apply-bg">Apply</div></a>
-          </div>
-        </div>
+        <Parallax offsetXMax="0px" offsetXMin="50px" offsetXMax="0px">
+        <div className="deal"><h1 className="hello-text">Here is the deal</h1></div>
+        </Parallax>
 
+        <Parallax offsetXMax="0px" offsetXMin="0px" offsetXMax="50px">
+        <div className="steps-col">
+          {/* <div className="steps-row"> */}
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">01</h3></div>
+            <span className="divider"></span>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Click on Apply.</i></h3></div>
+          </div>
+
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">02</h3></div>
+            <span className="divider"></span>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Answer the questions that we have for you and help us evaluate your application</i></h3></div>
+          </div>
+
+          {/* </div> */}
+          {/* <div className="steps-row"> */}
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">03</h3></div>
+            <span className="divider"></span>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>We will get back to you on the email address you provide</i></h3></div>
+          </div>
+
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">04</h3></div>
+            <span className="divider"></span>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>You can then schedule a demo class</i></h3></div>
+          </div>
+
+          {/* </div> */}
+          {/* <div className="steps-row"> */}
+
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">05</h3></div>
+            <span className="divider"></span>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If you like the class and want to join, we will help you get on board</i></h3></div>
+          </div>
+
+          <div className="steps-row">
+            <div className="steps-text-1"><h3 className="section__title">06</h3></div>
+            <span className="divider"></span>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If this isn't your cup of tea, no biggie. We will share what other creators have in store. There is a lot of Python on the web and its awesome!</i></h3></div>
+          </div>
+          {/* </div> */}
+          {/* <div className="steps-row"> */}
+          <div className="steps-row center-btn">
+            <a className="btn" onClick={this.onApplyClicked}><span>Apply</span></a>
+          </div>
+          {/* </div> */}
+        </div>
+        </Parallax>
       </div>;
     }
 
