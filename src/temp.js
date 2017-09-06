@@ -94,4 +94,4 @@ instagram
 ---------
 
 Happy to announce the launch of my Education startup this Teachers month (Teachers' month? Yeah, Teachers shouldn't just get one day a year for them, its a cool job).
-#PythonProgramming #Chennai #SpacetimeEdu #
+#PythonProgramming #NammaChennai #SpacetimeEdu

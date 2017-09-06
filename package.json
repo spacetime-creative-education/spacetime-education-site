@@ -22,7 +22,9 @@
     "react-router": "^4.2.0",
     "react-scripts": "1.0.11",
     "react-scrollable-anchor": "^0.5.0",
-    "react-youtube": "^7.4.0"
+    "react-youtube": "^7.4.0",
+    "validate-js": "^2.0.1",
+    "validator": "^8.1.0"
   },
   "scripts": {
     "start": "react-scripts start",

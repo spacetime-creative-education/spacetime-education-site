@@ -14,6 +14,7 @@ import Menubar from './Menu.js';
 import StickyHeader from './StickyHeader.js';
 import MyMap from './MyMap.js';
 import Hello from './Hello.js';
+import Apply from './Apply.js';
 import MediaQuery from 'react-responsive';
 import ScrollableAnchor from 'react-scrollable-anchor'
 
@@ -118,7 +119,7 @@ isPseudoFullscreen={false}></MyMap>
             <ScrollableAnchor id={'contact'}>
             <div className="row row-6">
               <div className="box box-6 hidden"></div>
-              <div className="box box-6 "><Hello></Hello></div>
+              <div className="box box-6 "><Apply></Apply></div>
               <div className="box box-6 hidden"></div>
             </div>
             </ScrollableAnchor>
