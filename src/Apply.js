@@ -1,24 +1,33 @@
 import React, {Component} from 'react';
 import Hello from './Hello.js';
-import './bttn.min.css';
 import { Parallax } from 'react-scroll-parallax';
 
 
 class Apply extends Component {
   constructor(props){
     super(props);
-    this.state = {readyToApply: false}; // true when apply button is clicked
+    this.state = {
+      readyToApply: false,
+      formCompleted: false
+    }; // true when apply button is clicked
     this.onApplyClicked = this.onApplyClicked.bind(this);
+    // this.formCompleted = this.formCompleted.bind(this);
   }
 
   onApplyClicked() {
     this.setState({readyToApply: true});
   }
 
+  /* Form complete callback - NOT required as formspree wants redirection, otherwise can be cool */
+  // formCompleted(){
+  //   this.setState({formCompleted: true});
+  //   console.log("Form Completed");
+  // }
+
   render() {
     let content;
     if (this.state.readyToApply){
-      content = <Hello></Hello>
+      content = <Hello onFormComplete={this.formCompleted}></Hello>
     } else {
       content =
       <div>
@@ -32,7 +41,7 @@ class Apply extends Component {
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">01</h3></div>
             <span className="divider"></span>
-            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Click on Apply.</i></h3></div>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Click on Apply below</i></h3></div>
           </div>
 
           <div className="steps-row">
@@ -72,7 +81,7 @@ class Apply extends Component {
           {/* </div> */}
           {/* <div className="steps-row"> */}
           <div className="steps-row center-btn">
-            <a className="btn" onClick={this.onApplyClicked}><span>Apply</span></a>
+            <a className="btn" href="#apply" onClick={this.onApplyClicked}><span>Apply</span></a>
           </div>
           {/* </div> */}
         </div>

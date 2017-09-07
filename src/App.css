@@ -163,33 +163,28 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .row-1 {
   justify-content: space-between;
   align-items: center;
-  /*background-image: linear-gradient(#ff9d2f, #ff6126);
-  transform: skewY(-6deg);
-  transform-origin: top left;*/
 }
 
 .row-2 {
   justify-content: space-between;
   align-items: center;
-  /*background-image: linear-gradient(45deg, #f88485, #fcedb7);*/
+  background: var(--xmen-dark-green);
   background-image: linear-gradient(30deg, var(--xmen-light-green), var(--xmen-dark-green));
   background-color: #4e8f99;
-  /*transform: skewY(-6deg);
-  transform-origin: top left;
-  background: yellow;*/
-  shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
-  clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
+  shape-outside: polygon(0 10.45%, 100% 0, 100% 100%, 0 89.55%);
+  clip-path: polygon(0 10.45%, 100% 0, 100% 100%, 0 89.55%);
 }
 
 .row-3 {
   justify-content: space-between;
   align-items: center;
+  flex-wrap: nowrap;
   /*background: green;*/
 }
 
 .row-4 {
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
   background: var(--xmen-dark-blue);
   background-image: linear-gradient(45deg, var(--xmen-sunset-yellow), var(--xmen-sunset-pink));
   shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
@@ -198,7 +193,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 
 .row-5 {
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
+  /*background: pink;*/
 }
 
 .row-6 {
@@ -216,6 +212,8 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 
 .box {
   margin: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
   z-index: 1;
   /*box-shadow: 0.25rem 0.25rem 0.5rem var(--shadow);*/
 }
@@ -223,24 +221,22 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 /* box-* are going to be empty, they just create spaces. section-* on the other
 hand is used to fill content */
 .box-1 {
-  height: 65rem;
-  width: 5rem;
+  height: 75rem;
+  width: 0rem;
   background-color: var(--manatee);
   align-self: center;
-  /*transform: skewY(6deg);
-  transform-origin: top left;*/
 }
 
 .box-2 {
-  height: 40rem;
-  width: 20rem;
+  height: 90rem;
+  width: 0rem;
   background-color: var(--xmen-pink);
   align-self: center;
 }
 
 .box-3 {
-  height: 25rem;
-  width: 25rem;
+  height: 75rem;
+  width: 0rem;
   background-color: var(--primary-color-3);
 }
 
@@ -252,7 +248,8 @@ hand is used to fill content */
 
 .box-5 {
   height: 60rem;
-  width: 2rem;
+  width: 10rem;
+  /*background: orange;*/
 }
 
 .conversational-form {
@@ -268,9 +265,10 @@ hand is used to fill content */
 
 .section-1 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 30rem;
-  height: 20rem;
+  /*background: gray;*/
+  /*height: 20rem;*/
   /*background: pink;*/
 }
 
@@ -287,6 +285,7 @@ hand is used to fill content */
 .section-1-welcome {
   align-self: flex-end;
   /*background: green;*/
+  width: 70%;
 }
 
 .welcome-text {
@@ -294,22 +293,39 @@ hand is used to fill content */
   font-size: 1.5rem;
 }
 
+.section-1-noob {
+  align-self: flex-start;
+  /*background: green;*/
+  width: 70%;
+}
+
 .section-youtube {
   width: 32rem;
   height: 18rem;
+  -webkit-box-shadow: 0px 3px 25px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 3px 25px -10px rgba(0,0,0,0.75);
+  box-shadow: 0px 3px 25px -10px rgba(0,0,0,0.75);
 }
 
 .section-how {
   display: flex;
+  flex-direction: column;
+  /*height: 60rem;*/
+  width: 30rem;
+  /*order: 0;*/
+  /*background: blue;*/
+}
+
+.section-how-textarea {
+  display: flex;
   flex-direction: row;
-  height: 40rem;
-  width: 20rem;
-  order: 0;
 }
 
 .section-how-title {
   align-self: flex-start;
   border: 0.5rem solid var(--xmen-pink);
+  width: 20rem;
+  height: 20rem;
 }
 
 .section-how-title > h1.hello-text {
@@ -318,6 +334,7 @@ hand is used to fill content */
 
 .section-how-desc {
   align-self: flex-end;
+  width: 20rem;
 }
 
 .section-how-desc > h3 {
@@ -325,11 +342,29 @@ hand is used to fill content */
 }
 
 .section-3 {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40rem;
+  /*background: pink;*/
+  justify-content: center;
+  align-items: center;
+}
+
+.section-3-textarea {
   display: flex;
   flex-direction: row;
   width: 30rem;
-  height: 25rem;
-  /*backgroundpink;*/
+  align-self: flex-start;
+  flex-wrap: nowrap;
+  /*background: blue;*/
+  height: 75%;
+}
+
+.maparea {
+  align-self: flex-end;
 }
 
 .section-3-where {
@@ -344,7 +379,7 @@ hand is used to fill content */
 }
 
 .section-apply {
-  width: 40rem;
+  width: 30rem;
 }
 
 .custom-class1{
@@ -566,7 +601,9 @@ h2 > a.content-link:hover {
   height: 10rem;
   width: 0rem;
   border-left: 0.25rem solid black;
+  border-left: 0.25rem solid var(--platinum);
   border-right: 0.25rem solid black;
+  border-right: 0.25rem solid var(--platinum);
 }
 
 h3.section__title {
@@ -583,7 +620,8 @@ h3.section__title {
   letter-spacing: -0.05em;
   width: 8rem;
   /*margin: 0 0 1em 0;*/
-  color: var(--xmen-black);
+  /*color: var(--xmen-black);*/
+  color: var(--platinum);
   /*width: 100%;*/
   /*vertical-align: bottom;*/
   /*border-right: solid 1rem var(--xmen-black);*/

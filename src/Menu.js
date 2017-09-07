@@ -33,14 +33,14 @@ class Menubar extends Component {
           <div className="navigate">
             <div className="content-row">
               <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#home">Home</a></h2></div>
-            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#how">Learn</a></h2></div>
+              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#how">Course</a></h2></div>
             </div>
             <div className="content-row">
               <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#where">Where</a></h2></div>
-            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#when">When</a></h2></div>
+            <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#pricing">Pricing</a></h2></div>
             </div>
             <div className="content-row">
-              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#pricing">Pricing</a></h2></div>
+              <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#apply">Apply</a></h2></div>
             <div className="content-item"><h2><a onClick={this.closeMenu} className="content-link" href="#contact">Contact</a></h2></div>
             </div>
           </div>

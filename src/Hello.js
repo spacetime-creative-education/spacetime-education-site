@@ -7,6 +7,18 @@ class Hello extends Component {
 		constructor(props) {
 			super(props);
 			this.cf = null; // <-- Conversational Form ref
+			this.focus = this.focus.bind(this);
+		}
+
+		focus(){
+			console.log("Inside focus");
+			console.log(this.userInput);
+			if(this.cf.userInput)
+				{
+					this.cf.userInput.setFocusOnInput();
+					console.log("Focusing tried out");
+					this.cf.formEl.scrollIntoView();
+				}
 		}
 
     componentDidMount(){
@@ -78,10 +90,15 @@ class Hello extends Component {
 				console.log("Formdata:", formData);
 				console.log("Formdata, serialized:", formDataSerialized);
 				if (formDataSerialized["taketest-val"][0] == "yes"){
+					// window.document.getElementById('test_form').setAttribute("target", "_blank");
 					window.document.getElementById('test_form').submit();
+					// this.props.onFormComplete();  // Tell parent that the form is submitted successfully
 				}
       }
     });
+
+		this.focus();
+
   }
 
   render() {
@@ -139,7 +156,7 @@ class Hello extends Component {
 							type="text"
 							ref="nototest"
 							cf-conditional-taketest-val="no" />
-						<input type="submit" name="btnsubmit" value="Send" />
+						<input type="submit" name="btnsubmit" value="Send" />{/* button name should NOT be 'submit'*/}
 
 
 
