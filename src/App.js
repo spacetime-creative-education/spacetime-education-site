@@ -16,7 +16,10 @@ import MyMap from './MyMap.js';
 import Hello from './Hello.js';
 import Apply from './Apply.js';
 import MediaQuery from 'react-responsive';
-import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor'
+import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
+import PricingTable from './Pricing.js';
+import AboutUs from './AboutUs.js';
+
 
 ParallaxController.init();
 configureAnchors({offset: -60});
@@ -110,7 +113,7 @@ class App extends Component {
             <ScrollableAnchor id={'pricing'}>
             <div className="row row-4">
               <div className="box box-4 hidden"></div>
-              <div className="box box-4 hidden"></div>
+            <div className="box "><PricingTable></PricingTable></div>
               <div className="box box-4 hidden"></div>
             </div>
             </ScrollableAnchor>
@@ -128,7 +131,7 @@ class App extends Component {
             <ScrollableAnchor id={'contact'}>
             <div className="row row-6">
               <div className="box box-6 hidden"></div>
-              <div className="box box-6 "></div>
+              <div className="box box-6 "><AboutUs></AboutUs></div>
               <div className="box box-6 hidden"></div>
             </div>
             </ScrollableAnchor>

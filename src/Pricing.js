@@ -9,7 +9,7 @@ class PricingTable extends Component {
   render() {
     return (
       <div className="pricing-table">
-
+        <div class='wave -one'></div>
       </div>
     )
   }

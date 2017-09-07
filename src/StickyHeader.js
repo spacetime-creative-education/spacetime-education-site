@@ -15,11 +15,13 @@ class StickyHeader extends Component {
   componentDidMount() {
     console.log('componentDidMount invoked');
     window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('touchmove', this.handleScroll); //mobile scroll
   }
 
   componentWillUnmount() {
     console.log('componentWillUnmount invoked');
     window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('touchmove', this.handleScroll);
   }
 
   handleScroll(event){
