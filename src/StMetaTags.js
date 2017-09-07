@@ -9,6 +9,7 @@ class StMetaTags extends React.Component {
             {/*Made using http://www.favicon-generator.org/ */}
             <title>Spacetime Education</title>
             <meta charset="utf-8"></meta>
+            <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
             <link rel="apple-touch-icon" sizes="57x57" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/apple-icon-57x57.png"/>
             <link rel="apple-touch-icon" sizes="60x60" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/apple-icon-60x60.png"/>
             <link rel="apple-touch-icon" sizes="72x72" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/apple-icon-72x72.png"/>
