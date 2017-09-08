@@ -241,8 +241,8 @@ hand is used to fill content */
 }
 
 .box-4 {
-  height: 25rem;
-  width: 35rem;
+  height: 65rem;
+  width: 0rem;
   background-color: var(--primary-color-4);
 }
 
@@ -849,22 +849,102 @@ a.btn {
   box-shadow: 0px 3px 25px -10px rgba(0,0,0,0.75);
   overflow: hidden;
   background-color: white;
-  width: 20rem;
+  width: 24.72rem;
   height: 40rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .wave {
-  opacity: .4;
-  top: 3%;
-  left: 50%;
-  background: red;
-  width: 50%;
-  height: 50%;
-  margin-left: -25%;
-  margin-top: -25%;
-  transform-origin: 50% 50%;
-  animation: drift 3000ms infinite linear;
+  position: absolute;
+  opacity: .5;
+  border-radius: 40%;
+  width: 30rem;
+  height: 30rem;
+  animation: drift 6000ms infinite linear;
 }
+
+.discount {
+  color: var(--xmen-pink);
+}
+
+.-one{
+  top: 32rem;
+  left: -20%;
+  background: var(--xmen-pink);
+  background-image: linear-gradient(30deg, var(--xmen-light-green), var(--xmen-dark-green));
+  transform-origin: 50% 45%;
+}
+
+.-two{
+  top: 34rem;
+  left: 10%;
+  background: var(--xmen-light-green);
+  transform-origin: 50% 45%;
+}
+
+.-three{
+  top: 32rem;
+  left: -30%;
+  background: var(--xmen-dark-blue);
+  transform-origin: 50% 55%;
+  animation-direction: reverse;
+}
+
+.pricing-content {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  padding-top: 4rem;
+  justify-content: flex-start;
+  height: 100%;
+}
+
+.price {
+  font-size: 3rem;
+  font-weight: 200;
+  color: var(--manatee);
+  font-family: var(--primary-font);
+  border-bottom: solid 0.125rem var(--platinum);
+  text-align: center;
+}
+
+.feature {
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  color: var(--outer-space-gray);
+  text-align: left;
+  padding-bottom: 1rem;
+  /*line-height: 2rem;*/
+}
+
+.feature > a {
+  text-decoration: none;
+  background: linear-gradient(var(--xmen-yellow), var(--xmen-yellow)) bottom;
+}
+
+.download-syllabus {
+  border: 0.125rem solid black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  padding: 1rem;
+}
+
+.download-syllabus-link {
+  text-decoration: none;
+  align-self: center;
+  vertical-align: middle;
+  font-family: var(--primary-font);
+  color: black;
+  z-index: 5;
+}
+
 
 @keyframes drift {
   from { transform: rotate(0deg); }

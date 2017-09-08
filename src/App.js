@@ -113,7 +113,7 @@ class App extends Component {
             <ScrollableAnchor id={'pricing'}>
             <div className="row row-4">
               <div className="box box-4 hidden"></div>
-            <div className="box "><PricingTable></PricingTable></div>
+              <div className="box "><PricingTable></PricingTable></div>
               <div className="box box-4 hidden"></div>
             </div>
             </ScrollableAnchor>

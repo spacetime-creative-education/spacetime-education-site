@@ -27,15 +27,27 @@ class MyMap extends Component {
 
             if (nextProps.isFullscreen) {
               console.log(nextProps.viewportDimensions);
-              this.setState({viewport: {
-                latitude: 13.030970,
-                longitude: 80.183993,
-                width: nextProps.viewportDimensions.width,
-                height: nextProps.viewportDimensions.height,
-                zoom: 14,
-                bearing: 0,
-                pitch: 0
-              }
+              this.setState({
+                viewport: {
+                  latitude: 13.030970,
+                  longitude: 80.183993,
+                  width: nextProps.viewportDimensions.width,
+                  height: nextProps.viewportDimensions.height,
+                  zoom: 14,
+                  bearing: 0,
+                  pitch: 0
+                },
+                settings: {
+                  dragPan: true,
+                  dragRotate: true,
+                  scrollZoom: true,
+                  touchZoomRotate: true,
+                  doubleClickZoom: true,
+                  minZoom: 0,
+                  maxZoom: 20,
+                  minPitch: 0,
+                  maxPitch: 85
+                }
               });
             } else {
               console.log(this.props.width);
@@ -56,10 +68,11 @@ class MyMap extends Component {
 
   render(){
     //const {viewport, updateViewport} = this.props;
-    const {viewport} = this.state;
+    const {viewport, settings} = this.state;
     return (
       <MapGL
         {...viewport}
+        {...settings}
         mapStyle="mapbox://styles/neotheicebird/cj6o1xgu419mi2soe3i7l1pww"
         mapboxApiAccessToken={config.mapboxPublicKey}
         onViewportChange={v => this.setState({viewport: v})}
