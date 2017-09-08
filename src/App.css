@@ -141,7 +141,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 }
 
 .container {
-  background: red;
+  /*background: red;*/
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -170,7 +170,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
   align-items: center;
   background: var(--xmen-dark-green);
   background-image: linear-gradient(30deg, var(--xmen-light-green), var(--xmen-dark-green));
-  background-color: #4e8f99;
+  /*background-color: #4e8f99;*/
   shape-outside: polygon(0 10.45%, 100% 0, 100% 100%, 0 89.55%);
   clip-path: polygon(0 10.45%, 100% 0, 100% 100%, 0 89.55%);
 }
@@ -185,7 +185,7 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 .row-4 {
   justify-content: space-between;
   align-items: center;
-  background: var(--xmen-dark-blue);
+  background: var(--xmen-sunset-pink);
   background-image: linear-gradient(45deg, var(--xmen-sunset-yellow), var(--xmen-sunset-pink));
   shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
   clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 78.75%);
@@ -199,9 +199,10 @@ header.shorten-header > div.header-bar {  /*child of child of child of ...*/
 
 .row-6 {
   justify-content: space-between;
-  align-items: baseline;
-  background: var(--xmen-dark-blue);
-  background-image: radial-gradient(at bottom center, var(--xmen-light-blue), var(--xmen-dark-blue));
+  align-items: center;
+  background: var(--platinum);
+  /*background-image: radial-gradient(at bottom center, var(--platinum), var(--manatee));*/
+  background-image: linear-gradient(60deg, var(--platinum), var(--manatee));
   shape-outside: polygon(0 10.5%, 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 10.5%, 100% 0, 100% 100%, 0 100%);
 }
@@ -241,7 +242,7 @@ hand is used to fill content */
 }
 
 .box-4 {
-  height: 65rem;
+  height: 75rem;
   width: 0rem;
   background-color: var(--primary-color-4);
 }
@@ -259,8 +260,9 @@ hand is used to fill content */
 }
 
 .box-6 {
-  height: 25rem;
-  width: 30rem;
+  height: 50rem;
+  width: 0rem;
+  background: blue;
 }
 
 .section-1 {
@@ -378,9 +380,92 @@ hand is used to fill content */
   /*background: green;*/
 }
 
+.section-4 {
+  align-self: center; /* its relation to its parent flexbox */
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  height: 50rem;
+  /*background: pink;*/
+  justify-content: space-between;
+  align-items: center; /* childrens alignment */
+}
+
+.section-4-title {align-self: flex-start;}
+
+.section-4-card {}
+
 .section-apply {
   width: 30rem;
 }
+
+.section-6 {
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-row {
+  /*width: 90%;*/
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.copyright-section {
+  /*box-sizing: border-box;*/
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  /*border-top: solid 0.125rem var(--platinum);*/
+  width: 100%;
+  /*background: pink;*/
+}
+
+.footer-row-item {
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.built-with {
+  display: flex;
+  flex-direction: row;
+  font-family: var(--primary-font);
+  font-weight: bold;
+  color: var(--outer-space-gray);
+  padding: 0;
+  padding-top: 0.25rem;
+  width: 100%;
+  /*background: green;*/
+}
+
+.copyright-text {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0;
+  padding-bottom: 0.25rem;
+}
+.footer-link {
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/*.footer-link:hover {
+  text-decoration: underline;
+}*/
+
 
 .custom-class1{
   align-self: flex-end;
@@ -819,7 +904,7 @@ a.btn {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 0.25rem solid white;
+  /*border: 0.25rem solid white;*/
   border-radius: 2%;
   padding: 1rem;
 }
@@ -831,7 +916,7 @@ a.btn {
 .about-heading > h2 {
   font-family: var(--primary-font);
   text-decoration: underline;
-  color: white;
+  color: var(--outer-space-gray);
 }
 
 .about-desc {
@@ -840,7 +925,7 @@ a.btn {
 
 .about-desc > p {
   font-family: var(--secondary-font);
-  color: white;
+  color: var(--outer-space-gray);
 }
 
 .pricing-table {
@@ -868,6 +953,15 @@ a.btn {
 
 .discount {
   color: var(--xmen-pink);
+  display: flex;
+  align-items: center;
+  background: var(--xmen-yellow);
+  border-radius: 2%;
+  padding: 0.125rem;
+}
+
+.discount > p {
+  padding: 0;
 }
 
 .-one{

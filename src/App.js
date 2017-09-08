@@ -19,6 +19,7 @@ import MediaQuery from 'react-responsive';
 import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import PricingTable from './Pricing.js';
 import AboutUs from './AboutUs.js';
+import CopyrightSection from './CopyrightSection.js';
 
 
 ParallaxController.init();
@@ -43,7 +44,9 @@ class App extends Component {
         <StickyHeader onScroll={this.handleScroll}></StickyHeader>
         <div className="container" id="page-wrap">
             {/*<Menubar>Menu</Menubar>*/}
+
             <ScrollableAnchor id={'home'}>
+            <LazyLoad height={10+"rem"} offset={200}>
             <div className="row row-1">
               <div className="box box-1"></div>
               <div className="box section-1">
@@ -54,14 +57,16 @@ class App extends Component {
                   <h3 className="welcome-text"><i>Welcome to Spacetime Education. A fun place to learn<br/><a id="pythonorg" href="https://www.python.org/">Python Programming</a><br/>in Chennai.</i></h3>
                 </Parallax>
                 <Parallax className="box section-1-noob" offsetXMax="50px" offsetXMin="0px">
-                  <h3 className="welcome-text"><i>If you are a noob wanting to enter the adventurous world of programming, then we have the right course for you.</i></h3>
+                  <h3 className="welcome-text"><i>Are you are a noob wanting to enter the adventurous world of programming? we have the right course for you.</i></h3>
                 </Parallax>
               </div>
               <div className="box box-1 "></div>
             </div>
+            </LazyLoad>
             </ScrollableAnchor>
 
             <ScrollableAnchor id={'how'}>
+            <LazyLoad height={1000+"px"} offset={200}>
             <div className="row row-2">
               <div className="box box-2 hidden"></div>
               <div className="box section-how">
@@ -80,9 +85,11 @@ class App extends Component {
               </div>
               <div className="box box-2 hidden"></div>
             </div>
+            </LazyLoad>
             </ScrollableAnchor>
 
             <ScrollableAnchor id={'where'}>
+            <LazyLoad height={1000} offset={200}>
             <div className="row row-3">
               <div className="box box-3"></div>
               <div className="box section-3">
@@ -106,19 +113,29 @@ class App extends Component {
               </div>
               <div className="box box-3 "></div>
             </div>
+            </LazyLoad>
             </ScrollableAnchor>
 
             {/*<div className="row bus"><h1 data-shadow="Happy Coding!">Happy Coding!</h1></div>*/}
 
             <ScrollableAnchor id={'pricing'}>
+            <LazyLoad height={1000} offset={200}>
             <div className="row row-4">
-              <div className="box box-4 hidden"></div>
-              <div className="box "><PricingTable></PricingTable></div>
-              <div className="box box-4 hidden"></div>
+              <div className="box box-4 "></div>
+            <div className="box section-4">
+              <Parallax className="section-4-title" offsetXMax="50px" offsetXMin="0px" offsetYMax="50px" offsetYMin="0px">
+                <h1 className="hello-text">Pricing</h1>
+              </Parallax>
+              <div className="section-4-card"><PricingTable></PricingTable></div>
             </div>
+              {/* <div className="box "><PricingTable></PricingTable></div> */}
+              <div className="box box-4 "></div>
+            </div>
+            </LazyLoad>
             </ScrollableAnchor>
 
             <ScrollableAnchor id={'apply'}>
+            <LazyLoad height={1000} offset={200}>
             <div className="row row-5">
               <div className="box box-5 "></div>
               <div className="box section-apply ">
@@ -126,16 +143,26 @@ class App extends Component {
               </div>
               <div className="box box-5 "></div>
             </div>
+            </LazyLoad>
             </ScrollableAnchor>
 
             <ScrollableAnchor id={'contact'}>
+            <LazyLoad height={1000} offset={200}>
             <div className="row row-6">
-              <div className="box box-6 hidden"></div>
-              <div className="box box-6 "><AboutUs></AboutUs></div>
-              <div className="box box-6 hidden"></div>
-            </div>
-            </ScrollableAnchor>
+              <div className="box box-6"></div>
+              <div className="box section-6">
+                {/* <div className="footer-col"> */}
+                  <div className="footer-row"><AboutUs></AboutUs></div>
+                  <div className="footer-row">
 
+                  </div>
+                {/* </div> */}
+              </div>
+              <div className="box box-6"></div>
+            </div>
+            </LazyLoad>
+            </ScrollableAnchor>
+            <CopyrightSection></CopyrightSection>
             {/*<div className="row"><P5Wrapper sketch={footer_starfield}></P5Wrapper></div>*/}
           </div>
 

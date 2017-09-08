@@ -16,14 +16,15 @@ class PricingTable extends Component {
 
           <div className="price">Rs. 15,000</div>
           <hr></hr>
-        <span style={{"padding-bottom": 2+"rem"}}></span>
-      <div className="feature discount"><img src={Promotion} width="24px" height="24px"></img> 20% Student discount</div>
+          <span style={{"padding-bottom": 1+"rem"}}>
+            <div className="feature discount"><img src={Promotion} width="24px" height="24px"></img><p>Students can avail 20% discount</p></div>
+          </span>
           <div className="feature">12 Weeks course</div>
-          <div className="feature">2hrs/week classes to learn concepts</div>
-          <div className="feature">2hrs/week workshops to code and gain experential knowledge</div>
+          <div className="feature">2hrs/week class to learn concepts</div>
+          <div className="feature">2hrs/week worksession to code and gain experential knowledge</div>
+          <div className="feature">4hrs/week off-class on weekly assignments, and a final project</div>
           <div className="feature">Learn pro tools like <a href="https://git-scm.com/video/what-is-git">Git</a> for version control, <a href="https://docs.pytest.org/en/latest/">Py.test</a> for unit testing and about code coverage</div>
-          <div className="feature">Spend 4hrs/week off class on weekly assignments, and a final project</div>
-          <div className="feature">Wide range of topics. </div>
+          <div className="feature"></div>
           <a href="#" className="download-syllabus-link"><div className="download-syllabus">Download syllabus
         {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
           <path d="M38 18h-8v-12h-12v12h-8l14 14 14-14zm-28 18v4h28v-4h-28z"/>
