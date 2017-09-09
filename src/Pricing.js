@@ -22,7 +22,7 @@ class PricingTable extends Component {
           <div className="feature">12 Weeks course</div>
           <div className="feature">2hrs/week class to learn concepts</div>
           <div className="feature">2hrs/week worksession to code and gain experential knowledge</div>
-          <div className="feature">4hrs/week off-class on weekly assignments, and a final project</div>
+          <div className="feature">4hrs/week worth of weekly assignments, and project-work</div>
           <div className="feature">Learn pro tools like <a href="https://git-scm.com/video/what-is-git">Git</a> for version control, <a href="https://docs.pytest.org/en/latest/">Py.test</a> for unit testing and about code coverage</div>
           <div className="feature"></div>
           <a href="#" className="download-syllabus-link"><div className="download-syllabus">Download syllabus

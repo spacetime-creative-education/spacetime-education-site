@@ -34,10 +34,11 @@ class StMetaTags extends React.Component {
             <meta name="google" content="nositelinkssearchbox" />
             {/* Facebook sharing */}
             <meta property="og:url"                content="https://spacetime.education" />
-            <meta property="og:type"               content="article" />
+            <meta property="og:type"               content="website" />
             <meta property="og:title"              content="Spacetime Education" />
             <meta property="og:description"        content="The place to learn Python Programming in #NammaChennai" />
-            <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" />
+            <meta property="og:locale"             content="en_IN" />
+            {/* <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" /> */}
             {/* Make the value "index" and "follow" for production. No need for a staging site to be indexed */}
             <meta name="robots" content="noindex, nofollow" />
         </Helmet>
