@@ -348,7 +348,7 @@ hand is used to fill content */
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 100%;
+  width: 30rem;
   height: 40rem;
   /*background: pink;*/
   justify-content: center;
@@ -358,7 +358,7 @@ hand is used to fill content */
 .section-3-textarea {
   display: flex;
   flex-direction: row;
-  width: 30rem;
+  /*width: 30rem;*/
   align-self: flex-start;
   flex-wrap: nowrap;
   /*background: blue;*/
@@ -468,6 +468,7 @@ hand is used to fill content */
   padding: 0;
   padding-bottom: 0.25rem;
 }
+
 .footer-link {
   font-family: var(--secondary-font);
   cursor: pointer;
@@ -477,6 +478,7 @@ hand is used to fill content */
 /*.footer-link:hover {
   text-decoration: underline;
 }*/
+
 .subscribe > #mc_embed_signup {
   background: transparent !important;
 

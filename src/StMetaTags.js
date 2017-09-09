@@ -24,9 +24,9 @@ class StMetaTags extends React.Component {
             <link rel="icon" type="image/png" sizes="96x96" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/favicon-96x96.png"/>
             <link rel="icon" type="image/png" sizes="16x16" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/favicon-16x16.png"/>
             <link rel="manifest" href="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/manifest.json" />
-            <meta name="msapplication-TileColor" content="#00e965" />
+            <meta name="msapplication-TileColor" content="#444b59" />
             <meta name="msapplication-TileImage" content="https://s3.ap-south-1.amazonaws.com/spacetime-education/favicons/ms-icon-144x144.png" />
-            <meta name="theme-color" content="#00e965" />
+            <meta name="theme-color" content="#444b59" />
             <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
             <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css" />
             {/* Google SEO */}
@@ -39,6 +39,17 @@ class StMetaTags extends React.Component {
             <meta property="og:description"        content="The place to learn Python Programming in #NammaChennai" />
             <meta property="og:locale"             content="en_IN" />
             {/* <meta property="og:image"              content="http://static01.nyt.com/images/2015/02/19/arts/international/19iht-btnumbers19A/19iht-btnumbers19A-facebookJumbo-v2.jpg" /> */}
+
+            {/* Twitter Meta tags */}
+            <meta name="twitter:card" content="summary_large_image"/>
+            <meta name="twitter:url" content="https://spacetime.education"/>
+            <meta name="twitter:title" content="Launching Spacetime Education"/>
+            <meta name="twitter:description" content="Learn Python in a fun way in #NammaChennai. Along with Mastering the language, learn professional skills like Version control, Testing, Code Coverage and Test drived development. This classroom course is 3 months long, during which a student gets a good load of programming stimulus and should feel more comfortable thinking in code."/>
+            <meta name="twitter:image" content="https://davidwalsh.name/wp-content/themes/punky/images/logo.png"/>
+            <meta name="twitter:image:alt" content="A computer screen that says print brackets open, in quotes Hello World Brackets closed"/>
+            <meta name="twitter:site" content="@SpacetimeEdu" />
+            <meta name="twitter:creator" content="@neotheicebird" />
+
             {/* Make the value "index" and "follow" for production. No need for a staging site to be indexed */}
             <meta name="robots" content="noindex, nofollow" />
         </Helmet>
