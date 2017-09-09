@@ -31,11 +31,11 @@ class Apply extends Component {
     } else {
       content =
       <div>
-        <Parallax offsetXMax="0px" offsetXMin="50px" offsetXMax="0px">
-        <div className="deal"><h1 className="hello-text">Here is the deal</h1></div>
+        <Parallax className="deal" offsetXMax="0px" offsetXMin="50px" offsetXMax="0px">
+          <h1 className="hello-text">Here is the deal</h1>
         </Parallax>
 
-        <Parallax offsetXMax="0px" offsetXMin="0px" offsetXMax="50px">
+        <Parallax offsetXMax="0px" offsetXMin="0px" offsetXMax="0px">
         <div className="steps-col">
           {/* <div className="steps-row"> */}
           <div className="steps-row">

@@ -249,8 +249,8 @@ hand is used to fill content */
 
 .box-5 {
   height: 60rem;
-  width: 10rem;
-  /*background: orange;*/
+  width: 0rem;
+  background: orange;
 }
 
 .conversational-form {
@@ -262,7 +262,7 @@ hand is used to fill content */
 .box-6 {
   height: 50rem;
   width: 0rem;
-  background: blue;
+  /*background: blue;*/
 }
 
 .section-1 {
@@ -282,6 +282,7 @@ hand is used to fill content */
 .hello-text {
   font-family: var(--primary-font);
   font-size: 3rem;
+  /*background: blue;*/
 }
 
 .section-1-welcome {
@@ -292,7 +293,7 @@ hand is used to fill content */
 
 .welcome-text {
   font-family: var(--secondary-font);
-  font-size: 1.5rem;
+  /*font-size: 1.5rem;*/
 }
 
 .section-1-noob {
@@ -397,6 +398,10 @@ hand is used to fill content */
 
 .section-apply {
   width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*background: gray;*/
 }
 
 .section-6 {
@@ -429,8 +434,8 @@ hand is used to fill content */
 .copyright-section {
   /*box-sizing: border-box;*/
   width: 100%;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  /*padding-left: 2rem;*/
+  /*padding-right: 2rem;*/
   background: white;
   display: flex;
   flex-direction: column;
@@ -438,8 +443,8 @@ hand is used to fill content */
   justify-content: center;
   align-items: center;
   /*border-top: solid 0.125rem var(--platinum);*/
-  width: 100%;
-  /*background: pink;*/
+  /*width: 30rem;*/
+  /*background: var(--xmen-pink);*/
 }
 
 .footer-row-item {
@@ -454,6 +459,8 @@ hand is used to fill content */
   flex-direction: row;
   font-family: var(--primary-font);
   font-weight: bold;
+  flex-wrap: wrap;
+  justify-content: center;
   color: var(--outer-space-gray);
   padding: 0;
   padding-top: 0.25rem;
@@ -494,7 +501,7 @@ hand is used to fill content */
 }
 
 .yellow {
-  background: yellow;
+  background: yellow !important;
 }
 
 .card {
@@ -665,6 +672,11 @@ h2 > a.content-link:hover {
 }
 
 /* Apply */
+.deal {
+  align-self: flex-start;
+  width: 20rem;
+  /*background: red;*/
+}
 .deal > h1 {
   font-family: var(--primary-font);
 }
@@ -692,14 +704,21 @@ h2 > a.content-link:hover {
 .steps-text-1 {
   /*background: blue;*/
   /*align-self: flex-end;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*background: yellow;*/
 }
 
 .steps-text-2 {
   /*background: yellow;*/
   /*align-self: flex-start;*/
-  height: 100%;
-  padding: 0;
-
+  /*height: 100%;*/
+  /*padding: 0;*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /*background: pink;*/
 }
 
 .divider {
@@ -736,6 +755,8 @@ h3.section__title {
 
 .step-item {
   padding-left: 1rem;
+  /*display: flex;*/
+  /*flex-wrap: wrap;*/
 }
 
 .apply-btn {
