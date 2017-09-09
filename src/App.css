@@ -409,11 +409,23 @@ hand is used to fill content */
 .footer-row {
   /*width: 90%;*/
   display: flex;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  /*background: green;*/
+  width: 100%;
 }
 
+.footer-follow-text {
+  font-family: var(--secondary-font);
+  font-weight: lighter;
+  font-style: italic;
+  color: var(--outer-space-gray);
+}
+
+.footer-email {
+  text-align: center !important;
+}
 .copyright-section {
   /*box-sizing: border-box;*/
   width: 100%;
@@ -465,7 +477,15 @@ hand is used to fill content */
 /*.footer-link:hover {
   text-decoration: underline;
 }*/
+.subscribe > #mc_embed_signup {
+  background: transparent !important;
 
+}
+
+.footer-subscribe-title {
+  color: var(--outer-space-gray);
+  font-family: var(--secondary-font);
+}
 
 .custom-class1{
   align-self: flex-end;
@@ -882,6 +902,11 @@ a.btn {
 #mce-EMAIL:required:focus {
   box-shadow: none !important;
   border-bottom: 0.125rem solid var(--manatee) !important;
+}
+
+#mc-embedded-subscribe {
+  background-color: var(--outer-space-gray) !important;
+  font-family: var(--primary-font) !important;
 }
 
 @keyframes banner {

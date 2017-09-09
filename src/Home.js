@@ -20,6 +20,7 @@ import ScrollableAnchor, { configureAnchors } from 'react-scrollable-anchor';
 import PricingTable from './Pricing.js';
 import AboutUs from './AboutUs.js';
 import CopyrightSection from './CopyrightSection.js';
+import { SocialIcon } from 'react-social-icons';
 
 
 ParallaxController.init();
@@ -154,9 +155,27 @@ class Home extends Component {
                 {/* <div className="footer-col"> */}
                   <div className="footer-row"><AboutUs></AboutUs></div>
                   <div className="footer-row">
-
+                    <div className="subscribe">
+                      <div id="mc_embed_signup">
+                        <form action="//education.us16.list-manage.com/subscribe/post?u=65f46eacbe6dbada2c090fe3f&amp;id=3544e756ae" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" className="validate" target="_blank" novalidate>
+                            <div id="mc_embed_signup_scroll">
+                        	     <label for="mce-EMAIL" className="footer-subscribe-title">Subscribe to our mailing list</label>
+                             <input type="email" name="EMAIL" className="email footer-email" id="mce-EMAIL" placeholder="email address" required />
+                           <div style={{"position": "relative", "left": "-5000px"}} aria-hidden="true"><input type="text" name="b_65f46eacbe6dbada2c090fe3f_3544e756ae" tabindex="-1" value="" /></div>
+                           <div className="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" className="button"/></div>
+                            </div>
+                        </form>
+                      </div>
+                    </div>
+                    <div className="footer-follow-text">Follow us</div>
+                    <div className="social-icons">
+                      <SocialIcon className="filtered" url="https://twitter.com/SpacetimeEdu"></SocialIcon>
+                      <SocialIcon className="filtered" url="https://www.facebook.com/SpacetimeEdu/"></SocialIcon>
+                      <SocialIcon className="filtered" url="https://www.youtube.com/channel/UCEzmkFCycBMDJq9xH58ApHQ?view_as=subscriber"></SocialIcon>
+                      <SocialIcon className="filtered" url="https://www.instagram.com/SpacetimeEdu/"></SocialIcon>
+                      <SocialIcon className="filtered" url="https://medium.com/spacetime-education"></SocialIcon>
+                    </div>
                   </div>
-                {/* </div> */}
               </div>
               <div className="box box-6"></div>
             </div>
