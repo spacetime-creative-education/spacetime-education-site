@@ -75,7 +75,7 @@ class Home extends Component {
                   <h1 className="hello-text">Fun with Python Programming for beginners</h1>
                 </Parallax>
                 <Parallax className="box section-how-desc" offsetXMax="0px" offsetXMin="50px">
-                  <h3 className="welcome-text"><i>Introducing a <span style={{'text-decoration':'line-through'}}>Revolutionary</span> Nah... Not so much. Introducing a fun take on learning to code in python! This classroom course aims at establishing good coding practices, and get one ready to become a full-stack developer, or to learn Machine Learning techniques.</i></h3>
+                  <h3 className="welcome-text"><i>Introducing a <span style={{'text-decoration':'line-through'}}>Revolutionary</span> Nah... Not so much. Introducing a fun-filled classroom course on learning to code in python! This course aims at bringing out good coding practices, and to get one ready to become a full-stack developer, or get into Machine Learning.</i></h3>
                 </Parallax>
                 <div className="box section-youtube">
                   <YouTube

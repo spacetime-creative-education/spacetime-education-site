@@ -293,7 +293,7 @@ hand is used to fill content */
 
 .welcome-text {
   font-family: var(--secondary-font);
-  /*font-size: 1.5rem;*/
+  font-size: 1.5rem;
 }
 
 .section-1-noob {
