@@ -55,19 +55,21 @@ class Hello extends Component {
 		this.refs.email.setAttribute('cf-validation', 'window.validateEmail');
 		this.refs.email.setAttribute('cf-error', 'The email id must be valid');
 
-		this.refs.taketest.setAttribute('cf-questions', 'We would like to know more about you. Can I ask you some questions?&&I have some general questions, math puzzles and analytical problems with me.')
+		this.refs.taketest.setAttribute('cf-questions', 'We would like to know more about you. Can I ask you some questions?&&I have some general questions, and puzzles with me.&&Note, you can click on your replies to edit them')
 
-		this.refs.yestotest.setAttribute('cf-questions', "Awesome! Here goes the first question&&Ramus' mom keeps his socks in his cupboard drawer. He owns 5 pairs of black socks and 5 pairs of white.&&The room is dark and there is a electricity failure. Ramu wants to make sure he picks up a pair of same colored socks.&&How many socks must he pick from the drawer?");
+		this.refs.yestotest.setAttribute('cf-questions', "Awesome! Here goes the first question&&Ramus' mom keeps his socks in his cupboard drawer. He owns 5 pairs of black socks and 5 pairs of white.&&The room is dark and the lights doesn't work. Ramu wants to make sure he picks up a pair of same color socks for his field trip tomorrow.&&How many socks should he pick from the drawer to ensure that?");
 		this.refs.yestotest.setAttribute('cf-validation', "window.isPositiveInteger");
 		this.refs.yestotest.setAttribute('cf-conditional-taketest-val', "yes");
 
 		this.refs.nototest.setAttribute('cf-questions', "You decided not to continue, I am sad. Hmmm... Ok, bye bye");
 		this.refs.nototest.setAttribute('cf-conditional-taketest-val', "no");
 
-		this.refs.q2.setAttribute('cf-questions', "Cool. Here is the 2nd question.&&What is the next number in the sequence 0, 1, 1, 2, 3, 5,___");
-		this.refs.q2.setAttribute('cf-validation', "window.isPositiveInteger");
+		this.refs.how_many_axes.setAttribute('cf-questions', "Cool. Here is the 2nd question.&&Its a physics question. If Sachin takes a cricket ball, and throws it with a rotation along the axis of its seam&&But then the wind adds a rotation at an angle to the seam&&In how many axes is the ball rotating");
 
-		this.refs.q3.setAttribute('cf-questions', "Hey I have got a physics question. If Sachin takes a cricket ball, and rotates it along the axis of its seam&&But then the wind adds a rotation at an angle to the seam&&In how many axes is the ball rotating");
+		this.refs.fibonacci.setAttribute('cf-questions', "What is the next number in the sequence 0, 1, 1, 2, 3, 5,___");
+		this.refs.fibonacci.setAttribute('cf-validation', "window.isPositiveInteger");
+
+		this.refs.threads.setAttribute('cf-questions', "You have 2 pieces of string of different, unspecified length, and some matches.&&Each piece of string takes exactly an hour to burn, but the burn rate is not constant. This means that it could take 59 minutes to burn the first 1⁄4, and 1 minute for the rest.&&Using only the matches and the strings, how can you measure 45 minutes?");
 
 		this.refs.g1.setAttribute('cf-questions', "What would you like to create with python?");
 		this.refs.g2.setAttribute('cf-questions', "Have you done programming before? if so which programming languages have you worked with?");
@@ -128,25 +130,26 @@ class Hello extends Component {
 						<input
 							type="text"
 							id="gr8"
-							name="cfc-step1"
+							name="how-many-socks"
 							ref="yestotest"
 							cf-conditional-taketest-val="yes" />
 
-							<fieldset id="q3-value" ref="q3">
-										<label for="q3-1">One
-											<input type="radio" name="q3-val" id="q3-1" value="1"/>
+							<fieldset id="how_many_axes-value" ref="how_many_axes">
+										<label for="how_many_axes-1">One
+											<input type="radio" name="how_many_axes-val" id="how_many_axes-1" value="1"/>
 										</label>
 
-										<label for="q3-2">Two
-											<input type="radio" name="q3-val" id="q3-2" value="2"/>
+										<label for="how_many_axes-2">Two
+											<input type="radio" name="how_many_axes-val" id="how_many_axes-2" value="2"/>
 										</label>
 
-										<label for="q3-3">Three
-											<input type="radio" name="q3-val" id="q3-3" value="3"/>
+										<label for="how_many_axes-3">Three
+											<input type="radio" name="how_many_axes-val" id="how_many_axes-3" value="3"/>
 										</label>
 								</fieldset>
 
-						<input type="text" name="question-2" ref="q2"/>
+						<input type="text" name="fibo-sequence" ref="fibonacci"/>
+						<input type="text" name="burning-threads" ref="threads"/>
 
 						<input type="text" name="g1" ref="g1"  />
 						<input type="text" name="g2" ref="g2"  />

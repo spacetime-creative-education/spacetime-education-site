@@ -41,13 +41,13 @@ class Apply extends Component {
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">01</h3></div>
             <span className="divider"></span>
-          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Click on Apply below</i></h3></div>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Click on the Apply button below</i></h3></div>
           </div>
 
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">02</h3></div>
             <span className="divider"></span>
-            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Answer the questions that we have for you and help us evaluate your application</i></h3></div>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>Answer all the questions our petbot has for you</i></h3></div>
           </div>
 
           {/* </div> */}
@@ -55,7 +55,7 @@ class Apply extends Component {
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">03</h3></div>
             <span className="divider"></span>
-            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>We will get back to you on the email address you provide</i></h3></div>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>We will evaluate your application and notify you on the email address you provide</i></h3></div>
           </div>
 
           <div className="steps-row">
@@ -70,13 +70,13 @@ class Apply extends Component {
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">05</h3></div>
             <span className="divider"></span>
-            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If you like the class and want to join, we will help you get on board</i></h3></div>
+          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If you like the class, give us a high five, we will set things up and you get on board</i></h3></div>
           </div>
 
           <div className="steps-row">
             <div className="steps-text-1"><h3 className="section__title">06</h3></div>
             <span className="divider"></span>
-          <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If this isn't your cup of tea, no biggie. We will share what other creators have in store. There is a lot of Python on the web and its awesome!</i></h3></div>
+            <div className="steps-text-2"><h3 className="welcome-text step-item"><i>If this isn't your cup of tea, no biggie, give us a high five, we will share what other creators have in store. There is a lot of Python on the web and its awesome!</i></h3></div>
           </div>
           {/* </div> */}
           {/* <div className="steps-row"> */}

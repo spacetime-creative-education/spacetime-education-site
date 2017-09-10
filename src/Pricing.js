@@ -25,7 +25,7 @@ class PricingTable extends Component {
           <div className="feature">4hrs/week worth of weekly assignments, and project-work</div>
           <div className="feature">Learn pro tools like <a href="https://git-scm.com/video/what-is-git">Git</a> for version control, <a href="https://docs.pytest.org/en/latest/">Py.test</a> for unit testing and about code coverage</div>
           <div className="feature"></div>
-          <a href="#" className="download-syllabus-link"><div className="download-syllabus">Download syllabus
+          <a href="https://s3.ap-south-1.amazonaws.com/spacetime-education/Syllabus.pdf" className="download-syllabus-link"><div className="download-syllabus">Download syllabus
         {/* <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
           <path d="M38 18h-8v-12h-12v12h-8l14 14 14-14zm-28 18v4h28v-4h-28z"/>
           <path d="M0 0h48v48h-48z" fill="none"/>
