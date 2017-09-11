@@ -58,7 +58,7 @@ class Home extends Component {
                   <h3 className="welcome-text"><i>Welcome to Spacetime Education. A fun place to learn<br/><a id="pythonorg" href="https://www.python.org/">Python Programming</a><br/>in Chennai.</i></h3>
                 </Parallax>
                 <Parallax className="box section-1-noob" offsetXMax="50px" offsetXMin="0px">
-                  <h3 className="welcome-text"><i>Are you are a noob wanting to enter the adventurous world of programming? we have the right course for you.</i></h3>
+                  <h3 className="welcome-text"><i>Are you a noob wanting to enter the adventurous world of programming? we have the right course for you.</i></h3>
                 </Parallax>
               </div>
               <div className="box box-1 "></div>
