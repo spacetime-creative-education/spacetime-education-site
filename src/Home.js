@@ -147,7 +147,7 @@ class Home extends Component {
             </LazyLoad>
             </ScrollableAnchor>
 
-            <ScrollableAnchor id={'contact'}>
+            <ScrollableAnchor id={'about'}>
             <LazyLoad height={1000} offset={200}>
             <div className="row row-6">
               <div className="box box-6"></div>
