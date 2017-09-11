@@ -11,19 +11,19 @@ class Hello extends Component {
 		}
 
 		focus(){
-			console.log("Inside focus");
-			console.log(this.userInput);
+			// console.log("Inside focus");
+			// console.log(this.userInput);
 			if(this.cf.userInput)
 				{
 					this.cf.userInput.setFocusOnInput();
-					console.log("Focusing tried out");
+					// console.log("Focusing tried out");
 					this.cf.formEl.scrollIntoView();
 				}
 		}
 
     componentDidMount(){
 			window.validateEmail = function(dto, success, error){
-				console.log(dto);
+				// console.log(dto);
 				if (validator.isEmail(dto.text)) {
 					return success();
 				}
@@ -84,13 +84,13 @@ class Hello extends Component {
 			// Using submitCallback breaks formspree sending. Just tell user that they will be redirected to new page.
       submitCallback: () => {
         // action when form submitted
-        console.log("Form submitted...");
+        // console.log("Form submitted...");
 				this.cf.addRobotChatResponse("Thanks for your time. Have a nice day!");
-				console.log(this.cf);
+				// console.log(this.cf);
 				var formData = this.cf.getFormData();
 				var formDataSerialized = this.cf.getFormData(true);
-				console.log("Formdata:", formData);
-				console.log("Formdata, serialized:", formDataSerialized);
+				// console.log("Formdata:", formData);
+				// console.log("Formdata, serialized:", formDataSerialized);
 				if (formDataSerialized["taketest-val"][0] == "yes"){
 					// window.document.getElementById('test_form').setAttribute("target", "_blank");
 					window.document.getElementById('test_form').submit();

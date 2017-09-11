@@ -13,32 +13,32 @@ class StickyHeader extends Component {
   }
 
   componentDidMount() {
-    console.log('componentDidMount invoked');
+    // console.log('componentDidMount invoked');
     window.addEventListener('scroll', this.handleScroll);
     window.addEventListener('touchmove', this.handleScroll); //iOS mobile scroll
   }
 
   componentWillUnmount() {
-    console.log('componentWillUnmount invoked');
+    // console.log('componentWillUnmount invoked');
     window.removeEventListener('scroll', this.handleScroll);
     window.removeEventListener('touchmove', this.handleScroll, false);
   }
 
   handleScroll(event){
       let scrollTopVal = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-      console.log('Scroll detected');
-      console.log(scrollTopVal);
-      console.log(window.scrollY );
-      console.log(window.pageYOffset);
-      console.log(document.documentElement.scrollTop);
+      // console.log('Scroll detected');
+      // console.log(scrollTopVal);
+      // console.log(window.scrollY );
+      // console.log(window.pageYOffset);
+      // console.log(document.documentElement.scrollTop);
       if (scrollTopVal !== 0){
         this.setState({shorten: true});
       } else {
         this.setState({shorten: false});
       }
 
-      console.log(this.state.shorten);
-      console.log((this.state.shorten ? 'shorten-header' : ''))
+      // console.log(this.state.shorten);
+      // console.log((this.state.shorten ? 'shorten-header' : ''))
       //event.preventDefault();
   }
 

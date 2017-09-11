@@ -23,10 +23,10 @@ class MyMap extends Component {
   componentWillReceiveProps(nextProps) {
         if (this.props.isFullscreen !== nextProps.isFullscreen) {
             // Fullscreen status has changed.
-            console.log("Toggling Fullscreen");
+            // console.log("Toggling Fullscreen");
 
             if (nextProps.isFullscreen) {
-              console.log(nextProps.viewportDimensions);
+              // console.log(nextProps.viewportDimensions);
               this.setState({
                 viewport: {
                   latitude: 13.030970,
@@ -50,7 +50,7 @@ class MyMap extends Component {
                 }
               });
             } else {
-              console.log(this.props.width);
+              // console.log(this.props.width);
               this.setState({viewport: {
                 latitude: 13.030970,
                 longitude: 80.183993,
