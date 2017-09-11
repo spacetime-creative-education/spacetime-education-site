@@ -108,7 +108,7 @@ class Home extends Component {
                     <MyMap width={500} height={500} forcePseudoFullscreen={true} isPseudoFullscreen={false}></MyMap>
                   </MediaQuery>
                   <MediaQuery maxWidth={767}>
-                    <MyMap width={"400"} height={400} forcePseudoFullscreen={true} isPseudoFullscreen={false}></MyMap>
+                    <MyMap width={"250"} height={250} forcePseudoFullscreen={true} isPseudoFullscreen={false}></MyMap>
                   </MediaQuery>
                 </div>
               </div>
