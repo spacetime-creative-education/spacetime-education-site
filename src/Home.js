@@ -77,11 +77,12 @@ class Home extends Component {
                 <Parallax className="box section-how-desc" offsetXMax="0px" offsetXMin="50px">
                   <h3 className="welcome-text"><i>Introducing a <span style={{'text-decoration':'line-through'}}>Revolutionary</span> Nah... Not so much. Introducing a fun-filled classroom course on learning to code in python! This course aims at bringing out good coding practices, and to get one ready to become a full-stack developer, or get into Machine Learning.</i></h3>
                 </Parallax>
-                <div className="box section-youtube">
+                <div className="box">
+                {/* <div className="box section-youtube">
                   <YouTube
                     videoId={"YgtL4S7Hrwo"}                  // defaults -> null
                     opts={opts}                              // defaults -> {}
-                  />
+                  /> */}
                 </div>
               </div>
               <div className="box box-2 hidden"></div>
