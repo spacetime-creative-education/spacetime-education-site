@@ -157,7 +157,7 @@ class Hello extends Component {
 							ref="yestotest"
 							cf-conditional-taketest-val="yes" />
 
-							<fieldset id="how_many_axes-value" ref="how_many_axes">
+							<fieldset id="how_many_axes-value" ref="how_many_axes" cf-conditional-taketest-val="yes">
 										<label for="how_many_axes-1">One
 											<input type="radio" name="how_many_axes-val" id="how_many_axes-1" value="1"/>
 										</label>
@@ -171,12 +171,12 @@ class Hello extends Component {
 										</label>
 								</fieldset>
 
-						<input type="text" name="fibo-sequence" ref="fibonacci"/>
-						<input type="text" name="burning-threads" ref="threads"/>
+						<input type="text" name="fibo-sequence" ref="fibonacci" cf-conditional-taketest-val="yes"/>
+						<input type="text" name="burning-threads" ref="threads" cf-conditional-taketest-val="yes"/>
 
-						<input type="text" name="g1" ref="g1"  />
-						<input type="text" name="g2" ref="g2"  />
-						<fieldset id="future-path" ref="futurepath">
+						<input type="text" name="g1" ref="g1" cf-conditional-taketest-val="yes"/>
+						<input type="text" name="g2" ref="g2" cf-conditional-taketest-val="yes"/>
+						<fieldset id="future-path" ref="futurepath" cf-conditional-taketest-val="yes">
 									<label for="fullstack">Web Development
 										<input type="checkbox" name="future-path-val" id="fullstack" value="fullstack"/>
 									</label>
@@ -193,7 +193,7 @@ class Hello extends Component {
 										<input type="checkbox" name="future-path-val" id="other" value="other"/>
 									</label>
 							</fieldset>
-							
+
 						{/* If user says no to take test, the form jumps to this point */}
 						<input
 							id="nope"
