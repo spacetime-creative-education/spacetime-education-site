@@ -30,6 +30,14 @@ class Hello extends Component {
 				return error();
 			}
 
+			window.validatePhone = function(dto, success, error){
+				console.log(dto);
+				if (validator.isMobilePhone(dto.text, 'en-IN')) {
+					return success();
+				}
+				return error();
+			}
+
 			// window.canTakeTest = function(dto, success, error) {
 			// 	if (validator.contains(dto.text.toLowerCase(), "yes")){
 			// 		console.log("Yes!");
@@ -54,11 +62,15 @@ class Hello extends Component {
     this.refs.email.setAttribute('cf-questions', "Hello {previous-answer}, Can you tell me your email id?||Hey {previous-answer}, may I know your email id?");
 		this.refs.email.setAttribute('cf-validation', 'window.validateEmail');
 		this.refs.email.setAttribute('cf-error', 'The email id must be valid');
+		this.refs.email.setAttribute('cf-input-placeholder', 'Type in your email id');
 
 		this.refs.canicall.setAttribute('cf-questions', 'Would you like us to give you a call?')
 
 		this.refs.yestocall.setAttribute('cf-questions', 'Please give me your contact number')
+		this.refs.yestocall.setAttribute('cf-validation', 'window.validatePhone');
 		this.refs.yestocall.setAttribute('cf-conditional-canicall-val', "yes")
+		this.refs.yestocall.setAttribute('cf-error', 'The mobile number is not valid');
+		this.refs.yestocall.setAttribute('cf-input-placeholder', 'Type in your mobile number');
 
 		this.refs.taketest.setAttribute('cf-questions', 'We would like to know more about you. Can I ask you some questions?&&I have some general questions, and puzzles with me.&&Note, you can click on your replies to edit them')
 
@@ -66,20 +78,32 @@ class Hello extends Component {
 		this.refs.yestotest.setAttribute('cf-validation', "window.isPositiveInteger");
 		this.refs.yestotest.setAttribute('cf-conditional-taketest-val', "yes");
 
-		this.refs.nototest.setAttribute('cf-questions', "You decided not to continue, Catch you later... bye bye");
+		this.refs.nototest.setAttribute('cf-questions', 'Nooooah... I had some interesting questions! Okies, see you later, bye&&Feel free to re-apply anytime to take the quiz&&Type "bye" to submit your answers to our team');
 		this.refs.nototest.setAttribute('cf-conditional-taketest-val', "no");
 
 		this.refs.how_many_axes.setAttribute('cf-questions', "Cool. Here is the 2nd question.&&Its a physics question. If Sachin takes a cricket ball, and throws it with a rotation along the axis of its seam&&But then the wind adds a rotation at an angle to the seam&&In how many axes is the ball rotating");
+		this.refs.how_many_axes.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.manyaxes_1.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.manyaxes_2.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.manyaxes_3.setAttribute('cf-conditional-taketest-val', "yes");
 
 		this.refs.fibonacci.setAttribute('cf-questions', "What is the next number in the sequence 0, 1, 1, 2, 3, 5,___");
 		this.refs.fibonacci.setAttribute('cf-validation', "window.isPositiveInteger");
+		this.refs.fibonacci.setAttribute('cf-conditional-taketest-val', "yes");
 
 		this.refs.threads.setAttribute('cf-questions', "You have 2 pieces of string of different, unspecified length, and some matches.&&Each piece of string takes exactly an hour to burn, but the burn rate is not constant. This means that it could take 59 minutes to burn the first 1⁄4, and 1 minute for the rest.&&Using only the matches and the strings, how can you measure 45 minutes?");
+		this.refs.threads.setAttribute('cf-conditional-taketest-val', "yes");
 
 		this.refs.g1.setAttribute('cf-questions', "What would you like to create with python?");
+		this.refs.g1.setAttribute('cf-conditional-taketest-val', "yes");
 		this.refs.g2.setAttribute('cf-questions', "Have you done programming before? if so which programming languages have you worked with?");
+		this.refs.g2.setAttribute('cf-conditional-taketest-val', "yes");
 		this.refs.futurepath.setAttribute('cf-questions', "Which of these programming paths would you like to take up after learning the basics of python programming?");
-
+		this.refs.futurepath.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.futurepath_1.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.futurepath_2.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.futurepath_3.setAttribute('cf-conditional-taketest-val', "yes");
+		this.refs.futurepath_4.setAttribute('cf-conditional-taketest-val', "yes");
 
 		this.cf = cf.startTheConversation({
       formEl: this.refs.form,
@@ -137,8 +161,7 @@ class Hello extends Component {
 							type="text"
 							id="yesph"
 							name="phone-number"
-							ref="yestocall"
-							cf-conditional-canicall-val="yes" />
+							ref="yestocall" />
 
 						<fieldset id="test-value" ref="taketest">
 								<label for="intro-yes">Yes
@@ -155,44 +178,44 @@ class Hello extends Component {
 							id="gr8"
 							name="how-many-socks"
 							ref="yestotest"
-							cf-conditional-taketest-val="yes" />
+							 />
 
-							<fieldset id="how_many_axes-value" ref="how_many_axes" cf-conditional-taketest-val="yes">
-										<label for="how_many_axes-1">One
-											<input type="radio" name="how_many_axes-val" id="how_many_axes-1" value="1"/>
-										</label>
+						<fieldset id="how_many_axes-value" ref="how_many_axes">
+								<label for="how_many_axes-1">One
+									<input type="radio" name="how_many_axes-val" ref="manyaxes_1" id="how_many_axes-1" value="1"/>
+								</label>
 
-										<label for="how_many_axes-2">Two
-											<input type="radio" name="how_many_axes-val" id="how_many_axes-2" value="2"/>
-										</label>
+								<label for="how_many_axes-2">Two
+									<input type="radio" name="how_many_axes-val" ref="manyaxes_2" id="how_many_axes-2" value="2"/>
+								</label>
 
-										<label for="how_many_axes-3">Three
-											<input type="radio" name="how_many_axes-val" id="how_many_axes-3" value="3"/>
-										</label>
-								</fieldset>
+								<label for="how_many_axes-3">Three
+									<input type="radio" name="how_many_axes-val" ref="manyaxes_3" id="how_many_axes-3" value="3"/>
+								</label>
+						</fieldset>
 
-						<input type="text" name="fibo-sequence" ref="fibonacci" cf-conditional-taketest-val="yes"/>
-						<input type="text" name="burning-threads" ref="threads" cf-conditional-taketest-val="yes"/>
+						<input type="text" name="fibo-sequence" ref="fibonacci" />
+						<input type="text" name="burning-threads" ref="threads" />
 
-						<input type="text" name="g1" ref="g1" cf-conditional-taketest-val="yes"/>
-						<input type="text" name="g2" ref="g2" cf-conditional-taketest-val="yes"/>
-						<fieldset id="future-path" ref="futurepath" cf-conditional-taketest-val="yes">
-									<label for="fullstack">Web Development
-										<input type="checkbox" name="future-path-val" id="fullstack" value="fullstack"/>
-									</label>
+						<input type="text" name="g1" ref="g1" />
+						<input type="text" name="g2" ref="g2" />
+						<fieldset id="future-path" ref="futurepath">
+							<label for="fullstack">Web Development
+								<input type="checkbox" name="future-path-val" ref="futurepath_1" id="fullstack" value="fullstack" cf-conditional-taketest-val="yes"/>
+							</label>
 
-									<label for="ml">Machine Learning
-										<input type="checkbox" name="future-path-val" id="ml" value="ML"/>
-									</label>
+							<label for="ml">Machine Learning
+								<input type="checkbox" name="future-path-val" ref="futurepath_2" id="ml" value="ML" cf-conditional-taketest-val="yes"/>
+							</label>
 
-									<label for="game">Game development
-										<input type="checkbox" name="future-path-val" id="game" value="gamedev"/>
-									</label>
+							<label for="game">Game development
+								<input type="checkbox" name="future-path-val" ref="futurepath_3" id="game" value="gamedev" cf-conditional-taketest-val="yes"/>
+							</label>
 
-									<label for="other">Other
-										<input type="checkbox" name="future-path-val" id="other" value="other"/>
-									</label>
-							</fieldset>
+							<label for="other">Other
+								<input type="checkbox" name="future-path-val" ref="futurepath_4" id="other" value="other" cf-conditional-taketest-val="yes"/>
+							</label>
+						</fieldset>
 
 						{/* If user says no to take test, the form jumps to this point */}
 						<input

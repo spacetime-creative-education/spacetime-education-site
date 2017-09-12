@@ -1021,8 +1021,8 @@ h3.section__title {
   /*margin: 0;*/
   /*padding: 0;*/
   padding-bottom: 0;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  /*-ms-flex-item-align: end;*/
+  /*align-self: flex-end;*/
   padding-right: 1rem;
   padding-left: 1rem;
   font-size: 5rem;
